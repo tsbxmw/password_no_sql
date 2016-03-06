@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="源.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="delay.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="disp_1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="draw.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="drawtuxing.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="huatu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MyUserControl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="panduan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="print.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="print_1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="screen_display.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shuaping.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="write_p_l.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="nihao.txt">
+      <Filter>源文件</Filter>
+    </Text>
+    <Text Include="nihaoaaaaaaaa.txt">
+      <Filter>源文件</Filter>
+    </Text>
+    <Text Include="sanjiao.txt">
+      <Filter>源文件</Filter>
+    </Text>
+    <Text Include="test_1.txt">
+      <Filter>源文件</Filter>
+    </Text>
+    <Text Include="test_2.txt">
+      <Filter>源文件</Filter>
+    </Text>
+    <Text Include="test_3.txt">
+      <Filter>源文件</Filter>
+    </Text>
+    <Text Include="test_4.txt">
+      <Filter>源文件</Filter>
+    </Text>
+    <Text Include="test_5.txt">
+      <Filter>源文件</Filter>
+    </Text>
+    <Text Include="test_6.txt">
+      <Filter>源文件</Filter>
+    </Text>
+    <Text Include="test_7.txt">
+      <Filter>源文件</Filter>
+    </Text>
+    <Text Include="x.txt">
+      <Filter>源文件</Filter>
+    </Text>
+    <Text Include="y.txt">
+      <Filter>源文件</Filter>
+    </Text>
+    <Text Include="yuan.txt">
+      <Filter>源文件</Filter>
+    </Text>
+    <Text Include="zhengfang.txt">
+      <Filter>源文件</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="logo.bmp">
+      <Filter>源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="includes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
