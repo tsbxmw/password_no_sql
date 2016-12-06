@@ -2,12 +2,12 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: http://mazhuang.org
+url: #http://mazhuang.org
 date_format: "ordinal"
-title: 码志
-subtitle: "打码改变人生"
-description: "马壮的个人博客"
-keywords: 码志, Zhuang Ma, mzlogin, mazhuang
+title: GitHub
+subtitle: "Main Page"
+description: "孟伟的个人博客"
+keywords: 孟伟,GITHUB
 favicon: /favicon.ico
 timezone: Asia/Shanghai
 encoding: "utf-8"
@@ -16,11 +16,11 @@ side_bar_repo_limit: 5
 # ---------------- #
 #      Author      #
 # ---------------- #
-author: Zhuang Ma
-organization: Sogou, Inc.
+author: Wei Meng
+organization: ZTE, Inc.
 organization_url: https://www.sogou.com
-location: Beijing, China
-email: chumpma@gmail.com
+location: Shanghai, China
+email: mengwei1101@hotmail.com
 
 # ---------------- #
 #    Navigation    #
@@ -77,27 +77,28 @@ collections:
         output: true
         permalink: /wiki/:path/
 
-repository: mzlogin/mzlogin.github.io
+repository: tsbxmw/tsbxmw.github.io
 
 # ---------------- #
 #      Socials     #
 # ---------------- #
-github_username: mzlogin
-douban_username: freedim
-facebook_username: mzlogin
-weibo_username: mzlogin
-zhihu_username: mzlogin
-twitter_username: mzlogin
+github_username: tsbxmw
+
+douban_username: tsbxmw
+#facebook_username: mzlogin
+weibo_username: 18842601728
+zhihu_username: 18842601728
+#twitter_username: mzlogin
 
 # ---------------- #
 #      Comments    #
 # ---------------- #
 # support provider: disqus, duoshuo
-comments_provider: disqus
+comments_provider: duoshuo
 # !!!重要!!! 请修改下面两个用户名为你自己申请的
 # !!!Important!!! Please modify usernames below to yours
-duoshuo_username: mazhuang
-disqus_username: mzlogin
+duoshuo_username: tsbxmw
+#disqus_username: mzlogin
 # 在使用 disqus 的时候可点击显示多说评论框
 lazy_load_duoshuo: true
 
@@ -110,6 +111,6 @@ google:
 # ---------------- #
 #      Datas       #
 # ---------------- #
-skill_software_keywords: [Java, C++, Python, Design Patterns]
-skill_mobile_app_keywords: [Android, Reverse Engineering]
-skill_windows_keywords: [Win32 SDK, DuiLib, WTL, COM, WinDbg]
+skill_software_keywords: [Java, C, Python]
+skill_mobile_app_keywords: [Android, AutoTest Engineering]
+skill_windows_keywords: [VS2010,BAT,Uiautomator,Espresso,Jenkins]
