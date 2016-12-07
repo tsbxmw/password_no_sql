@@ -64,10 +64,11 @@ keywords: Java, Markdown, Table of Contents
 
     接口方法为抽象，并为public
 
-    接口不可实例化。
+    接口不可实例化
+    
 ### 其他
-public 公共
+    public 公共
 
-protected 子类可访问
+    protected 子类可访问
 
-private 所在类访问
+    private 所在类访问
