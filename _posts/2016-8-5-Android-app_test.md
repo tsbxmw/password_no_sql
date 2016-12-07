@@ -34,11 +34,17 @@ Android APP 登录 注册 SAE 部署 - [0] 准备
 ### 二、mysql
 
         现在我们需要的是一个可以在公网中访问的mysql数据库，所以你需要db4free。
+        
         1、打开www.db4free.net 去注册一个自己的数据库
+        
         2、接下来通过Navicat for mysql （或者其他的mysql客户端）测试你申请的数据库是否可用
-        3、如果可以使用，建立一张表login，包含两个字段username 、 password
+        
+        3、如果可以使用，建立一张表login，包含两个字段username 、 password
+        
         4、添加一行数据：test_user、test_pass
+        
         5、记录下数据库的名字，主机名称为db4free.net，端口是3306，用户名密码即注册使用的。
+        
      其他的免费数据库：
           https://www.freemysqlhosting.net/
      现在，我们需要的数据库便申请完了。
