@@ -19,26 +19,35 @@ keywords: Jenkins, Markdown, Table of Contents
 ####  （1）获取jenkins安装文件
     打开网址https://jenkins.io/index.html
     ![](/images/blog/jenkins0/clip_image001.png)
+    
 #### （2）点击Download Jenkins
     ![](/images/blog/jenkins0/clip_image003.png)
+    
 #### （3）下载对应版本， 这里下载的是发布的windows版本
     ![](/images/blog/jenkins0/clip_image005.png)
+    
 #### （4）保存文件到E:\Jenkins下
     ![](/images/blog/jenkins0/clip_image007.png)
+    
 #### （5）解压下载的压缩文件，双击jenkins.msi文件进行安装
     ![](/images/blog/jenkins0/clip_image009.png)
+    
 #### （6）打开安装文件
     ![](/images/blog/jenkins0/clip_image011.png)
+    
 #### （7）点击Next，点击Change选择安装路径。 
     ![](/images/blog/jenkins0/clip_image013.png)
+    
 #### （8）点击OK，继续点击Next，然后点击Install安装
     ![](/images/blog/jenkins0/clip_image015.png)
     ![](/images/blog/jenkins0/clip_image017.png)
 
 #### （9）等待安装完成
     ![](/images/blog/jenkins0/clip_image019.png)
+    
 #### （10）完成
     ![](/images/blog/jenkins0/clip_image021.png)
+    
 #### （11）点击Finish后，会自动打开一个解锁Jenkins的网页
     ![](/images/blog/jenkins0/clip_image023.png)
 
@@ -50,6 +59,7 @@ keywords: Jenkins, Markdown, Table of Contents
     fa888b5165364efcb80361ced0d24032
     粘贴到网页中去
     ![](/images/blog/jenkins0/clip_image027.png)
+    
 #### （14）点击Continue.进入设置界面。由于公司网络问题，会出现Offline，直接点击Skip Plugin Installation跳过。
     ![](/images/blog/jenkins0/clip_image029.png)
 
@@ -60,12 +70,14 @@ keywords: Jenkins, Markdown, Table of Contents
 
 #### （16）安装完成，点击Start using Jenkins即可开始使用jenkins活动了。安装完成后，地址一般为http://localhost:8080。
     ![](/images/blog/jenkins0/clip_image035.png)
+    
 #### 注意事项：
     局域网内的PC访问网址为：http://ip:8080
 	ip为搭建jenkins的pc的ip地址。
 	（查看ip：在cmd中输入ipconfig –all 即可查找到自己的pc 的ip）。
 
-### 2、使用tomcat 和jenkins war文件进行搭建。
+###  2、使用tomcat 和jenkins war文件进行搭建
+
 #### （1）搭建tomcat环境。
     访问http://tomcat.apache.org/
     ![](/images/blog/jenkins0/clip_image037.png)
@@ -75,8 +87,10 @@ keywords: Jenkins, Markdown, Table of Contents
 
 #### （3）页面下滑，根据对应操作系统下载zip包。
     ![](/images/blog/jenkins0/clip_image041.png)
+    
 #### （4）保存到E:\Tomcat中去
     ![](/images/blog/jenkins0/clip_image043.png)
+    
 #### （5）解压到当前目录，是个文件夹
     ![](/images/blog/jenkins0/clip_image045.png)
 
@@ -87,6 +101,7 @@ keywords: Jenkins, Markdown, Table of Contents
     pause
     双击执行a.bat。会在cmd中显示错误原因。
     ![](/images/blog/jenkins0/clip_image047.png)
+    
 #### （7）针对错误原因，分析，不存在JAVA_HOME或者JRE_HOME环境变量。
     右击“计算机”选择“属性”，然后选择“高级系统设置”，选择“高级”->“环境变量”。
     ![](/images/blog/jenkins0/clip_image049.png)
@@ -108,11 +123,13 @@ keywords: Jenkins, Markdown, Table of Contents
 #### （11）获取jenkins安装文件
     打开网址https://jenkins.io/index.html
     ![](/images/blog/jenkins0/clip_image057.png)
+    
 #### （12）点击Download Jenkins
     ![](/images/blog/jenkins0/clip_image059.png)
 
 #### （13）点击2.7.2.war进行下载
     ![](/images/blog/jenkins0/clip_image061.png)
+    
 #### （14）拷贝jenkins.war到apache-tomcat-7.0.70\webapps下
     ![](/images/blog/jenkins0/clip_image063.png)
     ![](/images/blog/jenkins0/clip_image065.png)
@@ -126,9 +143,11 @@ keywords: Jenkins, Markdown, Table of Contents
 #### （18）打开显示的的路径找到
     C:\Users\10192582.ZTE\.jenkins\secrets\initialAdminPassword
     ![](/images/blog/jenkins0/clip_image071.png)
+    
 #### （19）右键使用notepad++打开，复制其中的内容
     21fda9a73ff94280a3841b33978e5286粘贴到网页中去
     ![](/images/blog/jenkins0/clip_image073.png)
+    
 #### （20）点击Continue.进入设置界面。由于公司网络问题，会出现Offline，直接点击Skip Plugin Installation跳过。
     ![](/images/blog/jenkins0/clip_image075.png)
 
@@ -139,6 +158,7 @@ keywords: Jenkins, Markdown, Table of Contents
 
 #### （22）安装完成，点击Start using         Jenkins即可开始使用jenkins活动了。安装完成后，地址一般为http://localhost:8080/jenkins
     ![](/images/blog/jenkins0/clip_image080.png)
+    
 ### 注意事项：
     局域网内的PC访问网址为：http://ip:8080/jenkins
 	ip为搭建jenkins的pc的ip地址。
