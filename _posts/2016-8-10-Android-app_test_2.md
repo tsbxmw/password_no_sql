@@ -6,7 +6,7 @@ description: 笔记
 keywords: Android, login, SAE, Java, Web
 ---
 
-Android APP 登录 注册 SAE 部署 - [1] 服务器部署
+Android APP 登录 注册 SAE 部署 - [1] JavaWeb的编写与部署
 
 ## 链接
 * [pre](https://tsbxmw.github.io/2016/08/06/Android-app_test_1/)
