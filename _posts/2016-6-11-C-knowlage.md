@@ -10,7 +10,7 @@ C 语言知识笔记
 
 ## 链接
 
-* [csdn link](http://blog.csdn.net/mengwei2275/article/details/51537905）
+* [csdn link](http://blog.csdn.net/mengwei2275/article/details/51537905)
 
 ##  内容
 
