@@ -18,13 +18,13 @@ keywords: Jenkins, Markdown, Table of Contents
 
 ####  （1）获取jenkins安装文件
     打开网址https://jenkins.io/index.html
-    ![](/images/blog/jenkins0/clip_image001.png)
+![](/images/blog/jenkins0/clip_image001.png)
     
 #### （2）点击Download Jenkins
-    ![](/images/blog/jenkins0/clip_image003.png)
+![](/images/blog/jenkins0/clip_image003.png)
     
 #### （3）下载对应版本， 这里下载的是发布的windows版本
-    ![](/images/blog/jenkins0/clip_image005.png)
+![](/images/blog/jenkins0/clip_image005.png)
     
 #### （4）保存文件到E:\Jenkins下
     ![](/images/blog/jenkins0/clip_image007.png)
