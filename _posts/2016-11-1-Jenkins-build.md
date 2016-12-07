@@ -18,6 +18,7 @@ Jenkins 入门系列之一：jenkins安装
 
 ####  （1）获取jenkins安装文件
     打开网址https://jenkins.io/index.html
+    
 ![](/images/blog/jenkins0/clip_image001.png)
     
 #### （2）点击Download Jenkins
