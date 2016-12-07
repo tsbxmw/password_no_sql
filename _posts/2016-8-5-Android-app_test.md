@@ -72,4 +72,4 @@ Android APP 登录 注册 SAE 部署 - [0] 准备
     <不定期更新>
 
 ### NEXT -->Android APP 登录 注册 SAE 部署 - [1]
-* [next](https://tsbxmw.github.io/2016/08/05/Android-app_test_2/)
+* [next](https://tsbxmw.github.io/2016/08/06/Android-app_test_1/)

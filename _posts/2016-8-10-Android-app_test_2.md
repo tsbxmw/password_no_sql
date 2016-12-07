@@ -9,8 +9,8 @@ keywords: Android, login, SAE, Java, Web
 Android APP 登录 注册 SAE 部署 - [1] 服务器部署
 
 ## 链接
-* [pre](https://tsbxmw.github.io/2016/08/05/Android-app_test_1/)
-* [next](https://tsbxmw.github.io/2016/08/05/Android-app_test_3/)
+* [pre](https://tsbxmw.github.io/2016/08/06/Android-app_test_1/)
+* [next](https://tsbxmw.github.io/2016/08/15/Android-app_test_3/)
 
 ##  内容
 
@@ -42,5 +42,5 @@ Android APP 登录 注册 SAE 部署 - [1] 服务器部署
 
     <不定期更新>
 
-### NEXT -->Android APP 登录 注册 SAE 部署 - [2] 客户端编写
-* [next](https://tsbxmw.github.io/2016/08/05/Android-app_test_2/)
+### NEXT -->Android APP 登录 注册 SAE 部署 - [3] 客户端编写
+* [next](https://tsbxmw.github.io/2016/08/15/Android-app_test_3/)

@@ -11,7 +11,7 @@ Android APP 登录 注册 SAE 部署 - [1] 服务器部署
 ## 链接
 * [pre](https://tsbxmw.github.io/2016/08/05/Android-app_test/)
 * [csdn link](http://blog.csdn.net/mengwei2275/article/details/51537991)
-* [next](https://tsbxmw.github.io/2016/08/05/Android-app_test_2/)
+* [next](https://tsbxmw.github.io/2016/08/10/Android-app_test_2/)
 
 ##  内容
 
@@ -117,4 +117,4 @@ Android APP 登录 注册 SAE 部署 - [1] 服务器部署
     <不定期更新>
 
 #### NEXT -->Android APP 登录 注册 SAE 部署 - [2] JavaWeb的编写与部署
-* [next](https://tsbxmw.github.io/2016/08/05/Android-app_test_2/)
+* [next](https://tsbxmw.github.io/2016/08/10/Android-app_test_2/)
