@@ -142,22 +142,22 @@ keywords: Jenkins, Markdown, Table of Contents
 
 #### （18）打开显示的的路径找到
     C:\Users\10192582.ZTE\.jenkins\secrets\initialAdminPassword
-   ![](/images/blog/jenkins0/clip_image071.png)
+  ![](/images/blog/jenkins0/clip_image025.png)
     
 #### （19）右键使用notepad++打开，复制其中的内容
    21fda9a73ff94280a3841b33978e5286粘贴到网页中去
-   ![](/images/blog/jenkins0/clip_image073.png)
+   ![](/images/blog/jenkins0/clip_image027.png)
     
 #### （20）点击Continue.进入设置界面。由于公司网络问题，会出现Offline，直接点击Skip Plugin Installation跳过。
-   ![](/images/blog/jenkins0/clip_image075.png)
+   ![](/images/blog/jenkins0/clip_image029.png)
 
 #### （21）创建管理员用户和密码
-   ![](/images/blog/jenkins0/clip_image077.png)
+   ![](/images/blog/jenkins0/clip_image031.png)
     点击Save and Finish，进入下一步。
-   ![](/images/blog/jenkins0/clip_image079.png)
+   ![](/images/blog/jenkins0/clip_image033.png)
 
 #### （22）安装完成，点击Start using         Jenkins即可开始使用jenkins活动了。安装完成后，地址一般为http://localhost:8080/jenkins
-   ![](/images/blog/jenkins0/clip_image080.png)
+   ![](/images/blog/jenkins0/clip_image035.png)
     
 ### 注意事项：
     局域网内的PC访问网址为：http://ip:8080/jenkins
