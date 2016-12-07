@@ -53,11 +53,13 @@ Jenkins 入门系列之一：jenkins安装
 
 #### （12）打开显示的的路径找到
     D:\Program Files\Jenkins\secrets\initialAdminPassword
+    
 ![](/images/blog/jenkins0/clip_image025.png)
 
 #### （13）右键使用notepad++打开，复制其中的内容
     fa888b5165364efcb80361ced0d24032
     粘贴到网页中去
+    
 ![](/images/blog/jenkins0/clip_image027.png)
     
 #### （14）点击Continue.进入设置界面。由于公司网络问题，会出现Offline，直接点击Skip Plugin Installation跳过。
@@ -80,6 +82,7 @@ Jenkins 入门系列之一：jenkins安装
 
 #### （1）搭建tomcat环境。
     访问http://tomcat.apache.org/
+    
 ![](/images/blog/jenkins0/clip_image037.png)
 
 #### （2）选择Tomcat7进行下载。
@@ -100,10 +103,12 @@ Jenkins 入门系列之一：jenkins安装
     call startup.bat
     pause
     双击执行a.bat。会在cmd中显示错误原因。
+    
 ![](/images/blog/jenkins0/clip_image047.png)
     
 #### （7）针对错误原因，分析，不存在JAVA_HOME或者JRE_HOME环境变量。
     右击“计算机”选择“属性”，然后选择“高级系统设置”，选择“高级”->“环境变量”。
+    
 ![](/images/blog/jenkins0/clip_image049.png)
 
 #### （8）在系统变量中点击新建，变量名是JAVA_HOME，变量值是JDK安装路径，再次点击新建，变量名是JRE_HOME,变量值是JDK下的JRE目录。然后点击确定、确定、确定。
@@ -120,6 +125,7 @@ Jenkins 入门系列之一：jenkins安装
     然后双击startup.bat进行启动，出现Server startup in xxx ms便成功。
 
 #### （10）部署jenkins环境到tomcat中。
+
 #### （11）获取jenkins安装文件
     打开网址https://jenkins.io/index.html
 ![](/images/blog/jenkins0/clip_image057.png)
@@ -142,7 +148,8 @@ Jenkins 入门系列之一：jenkins安装
 
 #### （18）打开显示的的路径找到
     C:\Users\10192582.ZTE\.jenkins\secrets\initialAdminPassword
-  ![](/images/blog/jenkins0/clip_image025.png)
+    
+![](/images/blog/jenkins0/clip_image025.png)
     
 #### （19）右键使用notepad++打开，复制其中的内容
    21fda9a73ff94280a3841b33978e5286粘贴到网页中去
