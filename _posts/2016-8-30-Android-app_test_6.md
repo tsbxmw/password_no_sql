@@ -26,8 +26,8 @@ Android APP 登录 注册 SAE 部署 - [3] 客户端编写
 
 * 后面增加新的功能
 * [登录](https://tsbxmw.github.io/2016/08/20/Android-app_test_4/)
-* [注册](https://tsbxmw.github.io/2016/08/25/Android-app_test_5/)
-* [记住密码](https://tsbxmw.github.io/2016/08/30/Android-app_test_6/)
+* [注册](https://tsbxmw.github.io/2016/08/20/Android-app_test_5/)
+* [记住密码](https://tsbxmw.github.io/2016/08/20/Android-app_test_6/)
 * [自动登录](https://tsbxmw.github.io/2016/08/20/Android-app_test_7/)
 * [动画显示](https://tsbxmw.github.io/2016/08/20/Android-app_test_8/)
 * [好友添加](https://tsbxmw.github.io/2016/08/20/Android-app_test_9/)
@@ -39,8 +39,6 @@ Android APP 登录 注册 SAE 部署 - [3] 客户端编写
 * [生成二维码功能](https://tsbxmw.github.io/2016/08/20/Android-app_test_15/)
 * 等
 
-### 所有功能已完成见link
-
 #### link
 
 * [github - xxx1 project](https://github.com/tsbxmw/xxx1)
@@ -48,5 +46,5 @@ Android APP 登录 注册 SAE 部署 - [3] 客户端编写
 
     <不定期更新>
 
-### NEXT -->Android APP 登录 注册 SAE 部署 - [4] 客户端编写 - 登录 
+### NEXT -->Android APP 登录 注册 SAE 部署 - [4] 功能的增加-登录
 * [next](https://tsbxmw.github.io/2016/08/20/Android-app_test_4/)

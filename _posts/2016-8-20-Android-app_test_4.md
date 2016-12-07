@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Android APP 登录 注册 SAE 部署 - [3] 客户端编写
-categories: Java
+title: Android APP 登录 注册 SAE 部署 - [4] 客户端编写 - 登录 
+categories: Android
 description: 笔记
 keywords: Android, login, SAE, Java, Web
 ---
-Android APP 登录 注册 SAE 部署 - [3] 客户端编写
+Android APP 登录 注册 SAE 部署 - [4] 客户端编写 - 登录 
 
 ## 链接
-* [pre](https://tsbxmw.github.io/2016/08/10/Android-app_test_2/)
-* [next](https://tsbxmw.github.io/2016/08/20/Android-app_test_4/)
+* [pre](https://tsbxmw.github.io/2016/08/15/Android-app_test_3/)
+* [next](https://tsbxmw.github.io/2016/08/25/Android-app_test_5/)
 
 ##  内容
 
@@ -23,7 +23,7 @@ Android APP 登录 注册 SAE 部署 - [3] 客户端编写
 
 ### 客户端的编写
 * 使用androidstudio 创建一个新的应用，这就是最简单的客户端。
-
+* 所有功能已完成见link
 * 后面增加新的功能
 * [登录](https://tsbxmw.github.io/2016/08/20/Android-app_test_4/)
 * [注册](https://tsbxmw.github.io/2016/08/25/Android-app_test_5/)
@@ -39,14 +39,15 @@ Android APP 登录 注册 SAE 部署 - [3] 客户端编写
 * [生成二维码功能](https://tsbxmw.github.io/2016/08/20/Android-app_test_15/)
 * 等
 
-### 所有功能已完成见link
+### 登录功能
+
+    <不定期更新>
 
 #### link
 
 * [github - xxx1 project](https://github.com/tsbxmw/xxx1)
 
 
-    <不定期更新>
 
-### NEXT -->Android APP 登录 注册 SAE 部署 - [4] 客户端编写 - 登录 
-* [next](https://tsbxmw.github.io/2016/08/20/Android-app_test_4/)
+### NEXT -->Android APP 登录 注册 SAE 部署 - [5] 客户端编写 - 注册
+* [next](https://tsbxmw.github.io/2016/08/25/Android-app_test_5/)
