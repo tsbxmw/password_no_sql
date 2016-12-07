@@ -63,7 +63,7 @@ Android APP 登录 注册 SAE 部署 - [1] 服务器部署
   根据您的应用需求，选择你想要的规格的容器。
 
 ![](/images/blog/sae/img_002.png)
-![](/images/blog/jenkins0/clip_image003.png)
+
   点击创建，创建一个新的容器应用。
 
 * 部署应用
@@ -88,7 +88,7 @@ Android APP 登录 注册 SAE 部署 - [1] 服务器部署
 * 容器管理
 
   在应用页面的左侧导航栏选择［容器管理］，在这个页面可以管理您刚才部署的容器实例。
-  
+
 ![](/images/blog/sae/img_003.png)
 
 #### 构建和运行说明
