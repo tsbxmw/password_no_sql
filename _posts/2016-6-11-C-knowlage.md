@@ -3,10 +3,10 @@ layout: post
 title: C 知识点
 categories: C
 description: 笔记
-keywords: Java, Markdown, Table of Contents
+keywords: C, Markdown, Table of Contents
 ---
 
-C 语音知识笔记
+C 语言知识笔记
 
 ## 链接
 
@@ -14,7 +14,7 @@ C 语音知识笔记
 
 ##  内容
 
-###  声明 定义区别
+### 声明 定义区别
 
   声明是告诉编译器，这个名字已经匹配到一块内存上了
 
