@@ -12,8 +12,9 @@ C 语音知识笔记
 
 * [csdn link](http://blog.csdn.net/mengwei2275/article/details/51537905）
 
-## 内容
-### 声明 定义区别
+##  内容
+
+###  声明 定义区别
 
   声明是告诉编译器，这个名字已经匹配到一块内存上了
 
