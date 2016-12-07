@@ -162,17 +162,17 @@ Android APP 登录 注册 SAE 部署 - [1] 服务器部署
 
 * 要使用mysql，首先需要连接。
   java连接到mysql有几种方式，这里使用的是JDBC连接方式
-    
-    public void connect(){
-      try{
-        Class.forName("com.mysql.jdbc.Driver").newInstance();
-        conn = (Connection) DriverManager.getConnection(url_read,username_db,password_db);
-        stmt = (Statement) conn.createStatement();
-        
-      }catch(Exception e){
-        e.printStackTrace();
+  
+      public void connect(){
+        try{
+          Class.forName("com.mysql.jdbc.Driver").newInstance();
+          conn = (Connection) DriverManager.getConnection(url_read,username_db,password_db);
+          stmt = (Statement) conn.createStatement();
+          
+        }catch(Exception e){
+          e.printStackTrace();
+        }
       }
-    }
 
 * Mysql使用的是免费的db4free,代价就是本地连接非常慢。
   [mysql link](http://www.db4free.net)
