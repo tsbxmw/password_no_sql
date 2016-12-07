@@ -11,9 +11,9 @@ keywords: Jenkins, Markdown, Table of Contents
 ## 链接
 
 * [csdn link](http://blog.csdn.net/mengwei2275/article/details/52996775)
-## 内容
-###  1、使用jenkins windows安装文件进行安装。
-#### （1）获取jenkins安装文件
+##  内容
+###   1、使用jenkins windows安装文件进行安装。
+####  （1）获取jenkins安装文件
     打开网址https://jenkins.io/index.html
     ![](/images/blog/jenkins0/clip_image001.png)
 #### （2）点击Download Jenkins
