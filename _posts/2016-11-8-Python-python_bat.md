@@ -20,114 +20,118 @@ keywords: Python, Markdown, bat
 
   主要作用是利用grep从文件中查找某些信息，并输出结果
 
-    @echo off
-    echo [------------------------------------------------------]
-    echo [          getset tool                                 ]
-    echo [          version 1.0                                 ]
-    echo [start]------------------------------------------------
-    SETLOCAL enabledelayedexpansion
-    echo BEGIN
-    if not exist system.img ( echo [info]  system.img 不存在 >fail.txt
-    goto end )
-    if not exist SET.ini ( echo [info]  SET.ini  不存在 >>fail.txt
-    goto end ) 
-    if exist result.txt del result.txt
-    for /f "tokens=*" %%i in (SET.ini) do (
-        echo [ get ] %%i
-        echo %%i>>result.txt
-        grep.exe "%%i" system.img >>null
-        ::echo !errorlevel!
-        if !errorlevel!==1 (
+```bat
+        @echo off
+        echo [------------------------------------------------------]
+        echo [          getset tool                                 ]
+        echo [          version 1.0                                 ]
+        echo [start]------------------------------------------------
+        SETLOCAL enabledelayedexpansion
+        echo BEGIN
+        if not exist system.img ( echo [info]  system.img 不存在 >fail.txt
+        goto end )
+        if not exist SET.ini ( echo [info]  SET.ini  不存在 >>fail.txt
+        goto end ) 
+        if exist result.txt del result.txt
+        for /f "tokens=*" %%i in (SET.ini) do (
+            echo [ get ] %%i
+            echo %%i>>result.txt
+            grep.exe "%%i" system.img >>null
+            ::echo !errorlevel!
+            if !errorlevel!==1 (
+                
+                echo FAIL>>result.txt 
+                
+                
+            ) else (
+                echo PASS>>result.txt
+                
+            )
             
-            echo FAIL>>result.txt 
-            
-            
-        ) else (
-            echo PASS>>result.txt
-            
-        )
-        
-     )
-    echo END
-    echo [open result.txt to read ]---------------------------
-    echo [stop]------------------------------------------------
-    goto ppt
-    :ppt
-    if exist result.txt ( echo successful!  ) else ( echo [error] can't create result.txt )
-    goto eof
-    :end
-    echo [error] 请查看[info]后信息
-    pause
-      
+         )
+        echo END
+        echo [open result.txt to read ]---------------------------
+        echo [stop]------------------------------------------------
+        goto ppt
+        :ppt
+        if exist result.txt ( echo successful!  ) else ( echo [error] can't create result.txt )
+        goto eof
+        :end
+        echo [error] 请查看[info]后信息
+        pause
+          
+```
 
 ### 改写为Python程序
 
   整体的功能没有改变
+  
 ```python
-    import os
-    import time
-    class Compare(object):
-        
-        def __init__(self):
-            print("[system - info] compare init")
-        
-        def fileisexist(self,filename):
-            fail = open('fail.txt','w')
-            if os.path.exists(filename):
-                print("[system - info] " + filename + " is exist")
-                return True
-            else:
-                print("[system - error] " + filename + " is not exist")
-                fail.write(filename + " is not exist")
-                return False
-            fail.close()
+
+        import os
+        import time
+        class Compare(object):
             
-        def deletefile(self,filename):
-            fail = open('fail.txt','w')
-            if os.path.exists(filename):
-                try:
-                    os.remove(filename)
-                    print("[system - info] remove " + filename  + " successful!")
-                except Exception ,e:
-                    fail.write(str(e))
-                    sys.exit()
-            else:
-                print("[system - info] " + filename  + " do not need delete!")
-        
-        def getpropfromimg(self,configfile,imgfile):
-            config = open(configfile)
-            findornot = open("result.txt",'w')
-            for line in config.readlines():
-                if line.startswith(";;"):
-                    print("[system - description] this is " + line)
+            def __init__(self):
+                print("[system - info] compare init")
+            
+            def fileisexist(self,filename):
+                fail = open('fail.txt','w')
+                if os.path.exists(filename):
+                    print("[system - info] " + filename + " is exist")
+                    return True
                 else:
-                    print("[system - finding] " + line)
-                    if '\n' in line:
-                        line = line[:-1]
-                    findornot.write(line+"\n")
-                    cmd = "grep.exe " + line + " system.img"
-                    #print("[system - debug] " + cmd)
-                    result = os.popen(cmd)
-                    data = result.readline()
-                    result.close()
-                    if data:
-                        print("[system - result]  successful\n")
-                        findornot.write("PASS\n")
-                    else:
-                        print("[system - result]  failed\n")
-                        findornot.write("FAIL\n")
-                          
-            config.close()
-            findornot.close()
+                    print("[system - error] " + filename + " is not exist")
+                    fail.write(filename + " is not exist")
+                    return False
+                fail.close()
+                
+            def deletefile(self,filename):
+                fail = open('fail.txt','w')
+                if os.path.exists(filename):
+                    try:
+                        os.remove(filename)
+                        print("[system - info] remove " + filename  + " successful!")
+                    except Exception ,e:
+                        fail.write(str(e))
+                        sys.exit()
+                else:
+                    print("[system - info] " + filename  + " do not need delete!")
             
-    if __name__ == "__main__":
-        compare = Compare()
-        if not compare.fileisexist("system.img"):
-            sys.exit() 
-        if not compare.fileisexist("SET.ini"):
-            sys.exit()
-        compare.deletefile("result.txt")
-        compare.getpropfromimg("SET.ini","system.img")
+            def getpropfromimg(self,configfile,imgfile):
+                config = open(configfile)
+                findornot = open("result.txt",'w')
+                for line in config.readlines():
+                    if line.startswith(";;"):
+                        print("[system - description] this is " + line)
+                    else:
+                        print("[system - finding] " + line)
+                        if '\n' in line:
+                            line = line[:-1]
+                        findornot.write(line+"\n")
+                        cmd = "grep.exe " + line + " system.img"
+                        #print("[system - debug] " + cmd)
+                        result = os.popen(cmd)
+                        data = result.readline()
+                        result.close()
+                        if data:
+                            print("[system - result]  successful\n")
+                            findornot.write("PASS\n")
+                        else:
+                            print("[system - result]  failed\n")
+                            findornot.write("FAIL\n")
+                              
+                config.close()
+                findornot.close()
+                
+        if __name__ == "__main__":
+            compare = Compare()
+            if not compare.fileisexist("system.img"):
+                sys.exit() 
+            if not compare.fileisexist("SET.ini"):
+                sys.exit()
+            compare.deletefile("result.txt")
+            compare.getpropfromimg("SET.ini","system.img")
 ```         
 
 ### 附上生成xml和html的程序
