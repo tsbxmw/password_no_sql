@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Python 小程序
+title: Python Program
 categories: Python
 description: 笔记
-keywords: Python, bat, html, xml
+keywords: Python, Markdown, bat
 ---
 
 将之前写的bat小程序转化为python
