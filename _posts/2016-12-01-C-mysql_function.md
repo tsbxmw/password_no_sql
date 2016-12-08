@@ -24,6 +24,7 @@ C 连接mysql
   网上连接数据库的方式很多。这里使用mysql数据库和jdbc连接？？
 
 ```C
+
                 #include <Windows.h>
                 #include <stdio.h>
                 #include <stdlib.h>
@@ -37,7 +38,6 @@ C 连接mysql
                 using namespace std;
                 string result_find_tab_line[1000];
 
-
                 int init_db(MYSQL *mysql)
                 {
                     int err = 0;
@@ -46,7 +46,6 @@ C 连接mysql
                         perror("|-- mysql init: ......");
                         exit(1);
                     }
-
                     if(!mysql_real_connect(mysql,SERVER_HOST,USER,PASS,NULL,0,NULL,0))
                     {
                         perror("|-- error : mysql_real_connect");
@@ -956,7 +955,6 @@ C 连接mysql
                     cout<<j<<"-_-";
                 else
                     cout<<j<<endl;;
-
             }
         }
 ```
