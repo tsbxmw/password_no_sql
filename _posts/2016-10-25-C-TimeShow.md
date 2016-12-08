@@ -10,7 +10,7 @@ keywords: C, Ubuntu, Time
 
 ## 链接
 
-* [C 时间矩阵显示](https://tsbxmw.github.io/2016/12/06/C-TimeShow/)
+* [C 时间矩阵显示](https://tsbxmw.github.io/2016/10/25/C-TimeShow/)
 
 ##  内容
 

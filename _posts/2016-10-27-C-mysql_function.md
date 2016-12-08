@@ -10,7 +10,7 @@ C 连接mysql
 
 ## 链接
 
-* [C C 连接mysql](https://tsbxmw.github.io/2016/12/01/C-mysql_function)
+* [C C 连接mysql](https://tsbxmw.github.io/2016/10/27/C-mysql_function)
 
 ##  内容
 
