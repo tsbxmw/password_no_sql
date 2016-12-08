@@ -10,6 +10,6 @@ permalink: /links/
 
 > 不给看！
 
-
+* [RESUME](/images/document/resume.pdf)
 * [Android](https://github.com/android)
 * [blog—source](http://mazhuang.org)
