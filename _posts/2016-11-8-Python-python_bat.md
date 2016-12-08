@@ -7,7 +7,7 @@ keywords: Python, bat, create xml
 ---
 
 将之前写的bat小程序转化为python
-python生成xml 和 html
+python生成xml和html
 
 ## 链接
 
@@ -120,15 +120,14 @@ python生成xml 和 html
                           
             config.close()
             findornot.close()
-            
-    if __name__ == "__main__":
-        compare = Compare()
-        if not compare.fileisexist("system.img"):
-            sys.exit() 
-        if not compare.fileisexist("SET.ini"):
-            sys.exit()
-        compare.deletefile("result.txt")
-        compare.getpropfromimg("SET.ini","system.img")
+        if __name__ == "__main__":
+            compare = Compare()
+            if not compare.fileisexist("system.img"):
+                sys.exit() 
+            if not compare.fileisexist("SET.ini"):
+                sys.exit()
+            compare.deletefile("result.txt")
+            compare.getpropfromimg("SET.ini","system.img")
         
             
 
