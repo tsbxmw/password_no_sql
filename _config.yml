@@ -1,7 +1,7 @@
 # ---------------- #
 #   Main Configs   #
 # ---------------- #
-baseurl:
+baseurl:http://mengweibbs.cn
 url: https://tsbxmw.github.io
 date_format: "ordinal"
 title: MengWei’s Blog
