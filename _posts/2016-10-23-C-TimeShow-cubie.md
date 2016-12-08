@@ -154,7 +154,7 @@ keywords: C, LUbuntu, Time, cubie
   则开始匹配：
   将匹配到的数字每行相加，输出到新的数组中。
 
-  ```c
+```c
   
        char time[8][200];
             for(int i=0;i<8;i++)
