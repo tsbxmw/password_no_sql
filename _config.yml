@@ -1,8 +1,8 @@
 # ---------------- #
 #   Main Configs   #
 # ---------------- #
-baseurl:
-url: http://mengweibbs.cn
+baseurl: mengweibbs.cn
+url: mengweibbs.cn
 date_format: "ordinal"
 title: MengWei’s Blog
 subtitle: "Personal Blog"
