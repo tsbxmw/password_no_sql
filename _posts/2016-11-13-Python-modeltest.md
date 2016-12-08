@@ -10,7 +10,7 @@ keywords: Python, autotest, APP
 
 ## 链接
 
-* [Python 自动卸载、安装系统app，自动测试](https://tsbxmw.github.io/2016/11/13/Pyhton-modeltest/)
+* [Python 自动卸载、安装系统app，自动测试](https://tsbxmw.github.io/2016/11/13/Python-modeltest/)
 
 ##  内容
 
