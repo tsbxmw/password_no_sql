@@ -3,7 +3,7 @@ layout: post
 title: Python 小程序
 categories: Python
 description: 笔记
-keywords: Python, bat, create html, create xml
+keywords: Python, bat, create xml
 ---
 
 将之前写的bat小程序转化为python
