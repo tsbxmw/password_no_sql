@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: Android Deverloper Websit China
+title: Android Deverloper Website China
 categories: Recommends
 description: Google 开发者中文网站
 keywords: google, Android, China
