@@ -33,24 +33,28 @@ keywords: C, Ubuntu, Time
   为了更好的实时同步系统时间并显示，采用了一个懒办法
   使用popen来获取系统时间
 
-    stream = popen("date","r");
-    fread(buf,sizeof(char),sizeof(buf),stream);
-    char *tmp;
-    int i = 0;
-    tmp = strtok(buf," ");
-    while(tmp!=NULL&&i<4){
-        tmp = strtok(NULL," ");
-        if(i==3){
-            i = 4;
-        }
-        i++;
-    }
+```c
 
+        stream = popen("date","r");
+        fread(buf,sizeof(char),sizeof(buf),stream);
+        char *tmp;
+        int i = 0;
+        tmp = strtok(buf," ");
+        while(tmp!=NULL&&i<4){
+            tmp = strtok(NULL," ");
+            if(i==3){
+                i = 4;
+            }
+            i++;
+        }
+```
 
   获取之后如何显示呢?
 
+
 #### 制定点阵：
 
+```c
             char a0[8][6] = {" *** ",
                              "*   *",
                              "*   *",
@@ -139,11 +143,14 @@ keywords: C, Ubuntu, Time
                              "  ** ",
                              "  ** ",
                              "     "};
+```
 
 #### 匹配时间字符
   例如输入时间是16:35:21
   则开始匹配：
   将匹配到的数字每行相加，输出到新的数组中。
+
+```c
 
        char time[8][200];
             for(int i=0;i<8;i++)
@@ -187,12 +194,14 @@ keywords: C, Ubuntu, Time
                 }
                 i++;
             }
+```
 
 #### 获得时间结果，并输出
   最开始是1s的间隔，效果令人不能忍受，而且由于延时函数的不准确导致秒会跳动。
   后来usleep(100000)函数，100000ns = 0.01s解决了问题
   并增加了彩色显示效果：
 
+```c
 
       for(int i=0;i<8;i++)
             {
@@ -221,20 +230,24 @@ keywords: C, Ubuntu, Time
                    }
                    printf("\n");
             }
+```
 
 ###源码 
 
+```c
 
-      #include<sys/types.h>
-      #include<unistd.h>
-      #include<stdlib.h>
-      #include<string.h>
-      #include<stdio.h>
-      void strcpy_1(char a[8][6],char b[8][6]){
+    #include<sys/types.h>
+    #include<unistd.h>
+    #include<stdlib.h>
+    #include<string.h>
+    #include<stdio.h>
+    
+    void strcpy_1(char a[8][6],char b[8][6]){
           for(int i =0;i<8;i++)
                   for(int j=0;j<6;j++)
                           a[i][j] = b[i][j];   
-      }
+    }
+    
     void print_number(char *date){
             char a0[8][6] = {" *** ",
                              "*   *",
@@ -433,6 +446,7 @@ keywords: C, Ubuntu, Time
     }
     return 0;
     }
+```
 
 ### LINK
 * [github time show ](https://github.com/tsbxmw/c-_show_config/)
