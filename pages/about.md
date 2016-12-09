@@ -8,15 +8,17 @@ menu: 关于
 permalink: /about/
 ---
 
-https://tsbxmw.github.io
-http://www.mengweibbs.cn(备案中)
+* https://tsbxmw.github.io
+
+* http://www.mengweibbs.cn(备案中)
 
 ## 联系
 
 * GitHub：[@mengwei](https://github.com/tsbxmw)
-* 博客：[{{ site.title }}]({{ site.url }})
+* 博客：[@mengweibbs.cn](http://mengweibbs.cn})
 * 微博: [@mengwei](http://weibo.com/jyhemw)
 * 知乎: [@mengwei](http://www.zhihu.com/people/18842601728)
+* CSDN: [@mengwei](http://blog.csdn.net/mengwei2275)
 
 ## Skill Keywords
 
