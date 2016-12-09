@@ -6,7 +6,7 @@ description: 笔记
 keywords: android, test, Espresso
 ---
 
-在命令行里显示时间
+一个简单的用例
 
 ## 链接
 
