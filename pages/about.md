@@ -15,7 +15,7 @@ permalink: /about/
 ## 联系
 
 * GitHub：[@mengwei](https://github.com/tsbxmw)
-* 博客：[@mengweibbs.cn](http://mengweibbs.cn})
+* 博客：[@mengweibbs.cn](http://mengweibbs.cn)
 * 微博: [@mengwei](http://weibo.com/jyhemw)
 * 知乎: [@mengwei](http://www.zhihu.com/people/18842601728)
 * CSDN: [@mengwei](http://blog.csdn.net/mengwei2275)
