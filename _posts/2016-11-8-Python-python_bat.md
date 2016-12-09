@@ -10,7 +10,7 @@ keywords: Python, Markdown, bat
 
 ## 链接
 
-* [Python 小程序](https://tsbxmw.github.io/2016/11/08/Pyhton-python_bat/)
+* [Python 小程序](https://tsbxmw.github.io/2016/11/08/Python-python_bat/)
 
 ##  内容
 
