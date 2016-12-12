@@ -15,21 +15,87 @@ keywords: android, test, Espresso
 ##  内容
 
   Android auto test of Espresso
-  一个简单的用例
+  一个简单的用例，用来测试登录界面
+  PS:使用的app是xxx1项目。
 
-  
+* 使用mavenCentral()代替jcenter()
+  在project的build.gradle中，替换：
+
+```gradle
+
+    buildscript {
+        repositories {
+            //jcenter()
+            mavenCentral()
+        }
+        dependencies {
+            classpath 'com.android.tools.build:gradle:2.2.0'
+        }
+    }
+
+    allprojects {
+        repositories {
+            //jcenter()
+            mavenCentral()
+            maven { url 'http://repo1.maven.org/maven2' }
+        }
+    }
+```
+
+* 在app的build.gradle中添加espresso依赖项
+androidTestCompile ('com.android.support.test.espresso:espresso-core:2.2.2'
+androidTestCompile ('com.android.support.test:runner:0.5' )
+androidTestCompile ('junit:junit:4.12')
+
+```gradle
+
+        apply plugin: 'com.android.application'
+
+        android {
+            compileSdkVersion 23
+            buildToolsVersion '23.0.3'
+
+            defaultConfig {
+                applicationId "com.example.app_test"
+                minSdkVersion 23
+                targetSdkVersion 23
+                testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+            }
+
+            buildTypes {
+                release {
+                    minifyEnabled false
+                    proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+                }
+            }
+        }
+
+        dependencies {
+            compile 'com.android.support:appcompat-v7:24.2.1'
+            compile files('libs/core-3.1.0.jar')
+            compile files('libs/org.apache.http.legacy.jar')
+            compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.2'
+            androidTestCompile ('com.android.support.test.espresso:espresso-core:2.2.2') {
+                exclude group: 'com.android.support'
+            }
+            androidTestCompile ('com.android.support.test:runner:0.5' ){
+                exclude group: 'com.android.support'
+            }
+            androidTestCompile ('junit:junit:4.12'){
+                exclude group : ' com.android.support'
+            }
+        }
+```
+* 进行编程
+
 ```java
 
         package AndroidTest;
-
         import android.app.Activity;
         import android.support.test.rule.ActivityTestRule;
-
         import com.example.app_test.MainActivity;
         import com.example.app_test.R;
-
         import org.hamcrest.Matcher;
-
         import static android.support.test.espresso.Espresso.closeSoftKeyboard;
         import static android.support.test.espresso.Espresso.onView;
         import static android.support.test.espresso.action.ViewActions.clearText;
