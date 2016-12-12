@@ -23,7 +23,7 @@ C 连接mysql
 ### 行动
   网上连接数据库的方式很多。这里使用mysql数据库和jdbc连接？？
 
-```C
+```c
 
                 #include <Windows.h>
                 #include <stdio.h>

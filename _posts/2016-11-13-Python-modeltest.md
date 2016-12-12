@@ -95,9 +95,9 @@ keywords: Python, autotest, APP
                 for d in dirs:
                     self.walk(next_dir+'/'+d, os.path.join(local_dir, d))
         class DownloadVersion(object):
-            ftpAddress = "10.63.237.2"
-            ftpUser = '10192582'
-            ftpPwd = 'MENGWei2275'
+            ftpAddress = "192.168.1.1"
+            ftpUser = 'user_name'
+            ftpPwd = 'passwd'
             '''file ends and local version dir '''
             file_ends = '' #or .zip
             version_dir = '..\\testdata\\version'
