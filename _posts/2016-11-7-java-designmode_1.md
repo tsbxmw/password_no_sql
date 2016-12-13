@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Java 设计模式
+title: Java 设计模式 - 单例模式
 categories: Java
 description: 笔记
 keywords: Java, design mode
 ---
 
-Java 设计模式 - 原则 - 工厂方法模式
+Java 设计模式 - 单例模式
 
 ## 内容
 
