@@ -8,6 +8,7 @@ keywords: vim, tools
 VIM快捷键
 
 * [link of vim usage](http://mengweibbs.cn/wiki/vim-tools/)
+
 ## 目录
 
 ### 1、vim ~/.vimrc 进入配置文件
