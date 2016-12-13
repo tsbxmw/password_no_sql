@@ -220,9 +220,8 @@ VIM快捷键
 * { = 到前一个空行上
   } = 到下一个空行上
 
- 
 
-### 5、VIM的一些插件：
+### 5、VIM的一些插件：
 
 > c.vim 
   :如果是用root账号的，把文件复制到/usr/share/vim/vim70中解压没有用的，不存在 $HOME/.vim 这个目录，没办法，只能新建个目录，然后把压缩包cp到这个目录，再unzip即可。在 ~/.vimrc 中 写入 filetype plugin on 
