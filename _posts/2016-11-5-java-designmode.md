@@ -76,6 +76,7 @@ Java 设计模式 - 原则 - 工厂方法模式
                 System.out.println("this is SmsSender");
             }
         }
+```
 
 * 实现工厂类 SendFactory
 
@@ -215,6 +216,7 @@ Java 设计模式 - 原则 - 工厂方法模式
                 System.out.println("this is SmsSender");
             }
         }
+```
 
 * 实现工厂类 SendFactory
 
@@ -282,6 +284,7 @@ Java 设计模式 - 原则 - 工厂方法模式
                 System.out.println("this is SmsSender");
             }
         }
+```
 
 * 公共的工厂类接口 Provider
 
@@ -302,7 +305,6 @@ Java 设计模式 - 原则 - 工厂方法模式
             public Sender produce(){
                 return new MailSender();
             }
-
         }
 ```
 
