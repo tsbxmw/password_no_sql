@@ -118,6 +118,6 @@ Java 设计模式 - 建造者模式 - 原型模式
      class SerializableObject implements Serializable{
         private static final long serialVersionUID = 1L;
      }
-
+```
 * 深复制，需要采用流的方式读入当前对象的二进制输入，再写出二进制数据对应的对象。
 
