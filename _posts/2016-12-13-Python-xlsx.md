@@ -10,7 +10,7 @@ python xml 解析方法 - xlrd
 
 ## 链接
 
-* [Python xml](https://tsbxmw.github.io/2016/12/13/Python-xlsx)
+* [Python excel](https://tsbxmw.github.io/2016/12/13/Python-xlsx)
 
 ##  内容
 
