@@ -80,9 +80,13 @@ Java 设计模式 - 单例模式
 
   以 A B 两个线程为例：
   a --  A B 同时进入if(instance==null)
+
   b --  A 先进入 synchronized(instance),instance 是 null 的，所以执行instance= new Singleton()
+
   c --  JVM先划出了一部分内存，分给Singleton实例，并赋值给instance，A离开了synchronized块
+
   d --  B进入 synchronized(instance)，instance此时不是null，所以离开了块synchronized(instance)，并将结果返回给调用者
+  
   e --  此时B直接使用Singleton的实例，但是还没有初始化，所以crash了
 
 > 优化 -- 内部类（工厂类）
