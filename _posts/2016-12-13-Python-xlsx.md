@@ -27,41 +27,41 @@ python xml 解析方法 - xlrd
 
 > 读取excel文件
 
-* 导入xlrd
+> 导入xlrd
 
     import xlrd
 
-* 打开excel
+> 打开excel
 
     workbook = xlrd.open_workbook("test.xlsx")
 
-* 获取所有的表格
+> 获取所有的表格
 
     worksheets = workbook.sheet_names()
 
-* 查找表格
+> 查找表格
 
-    for worksheet in worksheets:
+     for worksheet in worksheets:
         if worksheet == "test":
             sheet = workbook.sheet_by_name("test")
 
-* 获取表格的其他方式
+> 获取表格的其他方式
     
     sheet = workbook.sheets()[0]
     sheet = workbook.sheet_by_index(0)
 
 
-* 计算表格内容行数和列数
+> 计算表格内容行数和列数
 
     num_row = sheet.nrows
     num_col = sheet.ncols
 
-* 打印某一行或列
+> 打印某一行或列
 
     print sheet.row_values(1)
     print sheet.col_values(1)
 
-* 获取制定单元格的数据
+> 获取制定单元格的数据
 
     sheet.cell_value(row,col)
 
