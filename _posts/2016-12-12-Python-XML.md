@@ -200,6 +200,7 @@ python xml 解析方法 - sax - dom - et
        
        parser.parse("movies.xml")
 ```
+
 ### python xml -- xml.dom
 
 * 文件对象模型（Document Object Model，简称DOM），是W3C组织推荐的处理可扩展置标语言的标准编程接口。
@@ -240,6 +241,7 @@ python xml 解析方法 - sax - dom - et
        description = movie.getElementsByTagName('description')[0]
        print "Description: %s" % description.childNodes[0].data
 ```
+
 ### python xml -- ET
 
 * ElementTree就像一个轻量级的DOM，具有方便友好的API。代码可用性好，速度快，消耗内存少。
