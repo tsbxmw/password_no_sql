@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Java 设计模式
+title: Java 设计模式 - 工厂方法模式
 categories: Java
 description: 笔记
 keywords: Java, design mode
