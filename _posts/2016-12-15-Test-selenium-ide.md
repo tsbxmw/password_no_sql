@@ -49,6 +49,7 @@ keywords: selenium, test, selenium ide
 * 点击登录按钮
 * 进入页面
 * 点击退出按钮
+
 ![](/images/blog/selenium/img_001.png)
 
 > java
@@ -312,7 +313,7 @@ keywords: selenium, test, selenium ide
         webtest.testlogin()
         webtest.afterTest()
 
-
+```
 
 
 
