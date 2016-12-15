@@ -136,6 +136,31 @@ keywords: selenium, test, selenium ide
     }
 ```
 
+* java运行时需要导入库：
+* selenium-server-standalone-3.0.0.jar 
+* junit4库
+
+* 运行结果：
+
+```java
+      
+    1481771909465 geckodriver INFO  Listening on 127.0.0.1:15104
+    十二月 15, 2016 11:18:29 上午 org.openqa.selenium.remote.ProtocolHandshake createSession
+    信息: Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
+    1481771910014 mozprofile::profile INFO  Using profile path C:\Users\10192582.ZTE\AppData\Local\Temp\rust_mozprofile.1C349DsCIOYY
+    1481771910015 geckodriver::marionette INFO  Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+    1481771910040 geckodriver::marionette INFO  Connecting to Marionette on localhost:58243
+    1481771911151 Marionette  INFO  Listening on port 58243
+    十二月 15, 2016 11:18:33 上午 org.openqa.selenium.remote.ProtocolHandshake createSession
+    信息: Detected dialect: W3C
+    JavaScript error: http://10.63.220.2:8080/visual/js/bootstrap-datetimepicker.js, line 112: TypeError: (intermediate value).toString(...).split(...)[1] is undefined
+    JavaScript error: http://10.63.220.2:8080/visual/, line 171: TypeError: $table is undefined
+    [Child 13672] WARNING: pipe error: 232: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 513
+    [Child 13672] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+    十二月 15, 2016 11:18:39 上午 org.openqa.selenium.os.UnixProcess destroy
+    严重: Unable to kill process with PID 1721
+```
+
 > python2
 
 ```python
