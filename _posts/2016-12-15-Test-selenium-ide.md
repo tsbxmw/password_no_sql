@@ -50,7 +50,7 @@ keywords: selenium, test, selenium ide
 * 进入页面
 * 点击退出按钮
 
-![](/images/blog/selenium/img_001.png)
+![](/images/blog/selenium/img_001.PNG)
 
 > java
 
