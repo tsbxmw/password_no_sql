@@ -102,30 +102,161 @@ keywords: c, sort
 > C实现
 
 ```c
-   
-    int partition(int *data,int low,int high)
-    { 
-       int t = 0;
-    　　t = data[low];
-    　　while(low < high)
-    　　{ while(low < high && data[high] >= t)
-    　　high--;
-    　　data[low] = data[high];
-    　　while(low < high && data[low] <= t)
-    　　low++;
-    　　data[high] = data[low];
-    　　}
-    　　data[low] = t;
-    　　return low;
-    　　}
-    　　void sort(int *data,int low,int high) //快排每趟进行时的枢轴要重新确定，由此进 //一步确定每个待排小记录的low及high的值
-    　　{ if(low >= high)
-    　　return ;
-    　　int pivotloc = 0;
-    　　pivotloc = partition(data,low,high);
-    　　sort(data,low,pivotloc-1);
-    　　sort(data,pivotloc+1,high);
+  
+    #include <iostream>
+     
+    using namespace std;
+
+    void printa(int a[],int low,int high)
+    {
+            for(int i=low;i<high+1;i++)
+                cout<<a[i]<<" ";
+            cout<<endl;
     }
+
+    void Qsort(int a[], int low, int high)
+    {
+        if(low >= high)
+        {
+        cout<<"----end----"<<endl;
+            return;
+        }
+        int first = low;
+        int last = high;
+        int key = a[first];/*用字表的第一个记录作为枢轴*/
+      cout<<"----before----"<<endl;
+      printa(a,low,high);
+        while(first < last)
+        {
+            while(first < last && a[last] >= key)
+            {
+                --last;
+            }
+      
+            a[first] = a[last];/*将比第一个小的移到低端*/
+            cout<<"----start-----"<<endl;
+        printa(a,low,high);
+            while(first < last && a[first] <= key)
+            {
+                ++first;
+            }
+            a[last] = a[first];   
+        cout<<"----start2-----"<<endl;
+        printa(a,low,high);
+    /*将比第一个大的移到高端*/
+        }
+        a[first] = key;
+      cout<<"----oneend-----"<<endl;
+      printa(a,low,high);
+        Qsort(a, low, first-1);
+        Qsort(a, first+1, high);
+    }
+
+    int main()
+    {
+        int a[] = {3,4,1,3,5,6,7,3,2,7,9,8};
+     
+        Qsort(a, 0, sizeof(a) / sizeof(a[0]) - 1);/*这里原文第三个参数要减1否则内存越界*/
+     
+        for(int i = 0; i < sizeof(a) / sizeof(a[0]); i++)
+        {
+            cout << a[i] << "";
+        }
+         
+        return 0;
+    }/*参考数据结构p274(清华大学出版社，严蔚敏)*/
+```
+
+> 实际运行
+
+```c
+
+    ----before----
+    3 4 1 3 5 6 7 3 2 7 9 8
+    ----start-----
+    2 4 1 3 5 6 7 3 2 7 9 8
+    ----start2-----
+    2 4 1 3 5 6 7 3 4 7 9 8
+    ----start-----
+    2 1 1 3 5 6 7 3 4 7 9 8
+    ----start2-----
+    2 1 1 3 5 6 7 3 4 7 9 8
+    ----oneend-----
+    2 1 3 3 5 6 7 3 4 7 9 8
+    ----before----
+    2 1
+    ----start-----
+    1 1
+    ----start2-----
+    1 1
+    ----oneend-----
+    1 2
+    ----end----
+    ----end----
+    ----before----
+    3 5 6 7 3 4 7 9 8
+    ----start-----
+    3 5 6 7 3 4 7 9 8
+    ----start2-----
+    3 5 6 7 3 4 7 9 8
+    ----oneend-----
+    3 5 6 7 3 4 7 9 8
+    ----end----
+    ----before----
+    5 6 7 3 4 7 9 8
+    ----start-----
+    4 6 7 3 4 7 9 8
+    ----start2-----
+    4 6 7 3 6 7 9 8
+    ----start-----
+    4 3 7 3 6 7 9 8
+    ----start2-----
+    4 3 7 7 6 7 9 8
+    ----start-----
+    4 3 7 7 6 7 9 8
+    ----start2-----
+    4 3 7 7 6 7 9 8
+    ----oneend-----
+    4 3 5 7 6 7 9 8
+    ----before----
+    4 3
+    ----start-----
+    3 3
+    ----start2-----
+    3 3
+    ----oneend-----
+    3 4
+    ----end----
+    ----end----
+    ----before----
+    7 6 7 9 8
+    ----start-----
+    6 6 7 9 8
+    ----start2-----
+    6 6 7 9 8
+    ----oneend-----
+    6 7 7 9 8
+    ----end----
+    ----before----
+    7 9 8
+    ----start-----
+    7 9 8
+    ----start2-----
+    7 9 8
+    ----oneend-----
+    7 9 8
+    ----end----
+    ----before----
+    9 8
+    ----start-----
+    8 8
+    ----start2-----
+    8 8
+    ----oneend-----
+    8 9
+    ----end----
+    ----end----
+    123334567789请按任意键继续. . .
 ```
 
 > 性能分析
