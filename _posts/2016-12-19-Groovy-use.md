@@ -13,7 +13,9 @@ Groovy 简单使用介绍
 ### 注释
 
    单行 //
+
    多行 /*   */
+
    文档注释 /** */
 
 ### 标识符
@@ -22,11 +24,20 @@ Groovy 简单使用介绍
  
 * 以字母、美元符号、下划线开始
     
-    name  item3  with_item  $hello
+    name  
+
+    item3  
+
+    with_item 
+
+    $hello
+
 
 #### 引号标识符
 
-* 在点表达式后面可以使用一号标识符，比如a.b 可以表示为 a.'b' 或者 a."b"
+* 在点表达式后面可以使用一号标识符，
+
+   比如a.b 可以表示为 a.'b' 或者 a."b"
 
 #### 字符串
 
@@ -44,20 +55,29 @@ Groovy 简单使用介绍
 * 支持多行字符串
 
      def a='''
+
       line one
+
       line two
+
       line xxx
+
       '''
+
 #### 三双引号字符串
 
 * 与上面的类似，但是支持插值
 
+
 #### 双引号字符串
 
-* 没有插值表达式，就是Java.lang.String,如果有插值，就是groovy.lang.GString。
+* 没有插值表达式，就是Java.lang.String
+* 如果有插值，就是groovy.lang.GString。
 
      def a = "hello"
+
      def b = "hello world ${a}"
+
 
 #### 字符串插值
 
@@ -67,11 +87,13 @@ Groovy 简单使用介绍
 
 * 使用点号的时候，可以只用$ 代替 ${}
 
+
 #### 斜线字符串
 
 * 除了使用括号来括住字符串，还可以使用 /
     
      def a = /.*xxxx.*/
+
      def b = '.*xxxx.*'
 
      def c = /"xxxx"/
@@ -90,22 +112,27 @@ Groovy 简单使用介绍
 
 * 可以自适应
 
-     def a = 1
+         def a = 1
 
-     def b = 232323212314
+         def b = 232323212314
 
-     def c = 213421432143242143242143
+         def c = 213421432143242143242143
 
-     def d = 123.456
+         def d = 123.456
 
 * 如果强制指明一个数字的字面量类型，可以给字面量加上类型后缀
 
-     BigInteger G g
-     Long       L l
-     Integer    I i
-     BigDecimal G g
-     Double     D d
-     Float      F f
+         BigInteger G g
+
+         Long       L l
+
+         Integer    I i
+
+         BigDecimal G g
+
+         Double     D d
+
+         Float      F f
 
 #### 列表
 
@@ -143,6 +170,7 @@ Groovy 简单使用介绍
      name['a']
 
      name['d'] = 4
-     
+
      name.e = 5
 
+* link to git hub notion ...
