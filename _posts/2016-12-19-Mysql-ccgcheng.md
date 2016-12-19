@@ -225,3 +225,8 @@ mysql 存储过程
     MINUTE(datetime) //分返回符号,正负或0
     
     SQRT(number2) //开平方
+    
+
+## 链接
+
+[ mysql - 存储过程 ](https://tsbxmw.github.io/2016/12/19/Mysql-ccgcheng/)
