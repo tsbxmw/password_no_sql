@@ -26,7 +26,9 @@ Android APP 登录 注册 SAE 部署 - [1] JavaWeb的编写与部署
 * 使用Eclipse新建一个Java Web项目
   ![](/images/blog/sae/img_004.PNG)
 * 使用Json 和 Servelet传递信息
-    
+
+```java
+
         package json.servlet;
         import java.io.IOException;
         import javax.servlet.ServletException;
@@ -117,6 +119,8 @@ Android APP 登录 注册 SAE 部署 - [1] JavaWeb的编写与部署
           }
 
         }
+```
+
     这里主要关注doPost(),用来处理客户端的请求。
 
     当然，此时我们什么都没有处理
@@ -162,20 +166,8 @@ Android APP 登录 注册 SAE 部署 - [1] JavaWeb的编写与部署
 
 * 要使用mysql，首先需要连接。
   java连接到mysql有几种方式，这里使用的是JDBC连接方式
-<<<<<<< HEAD
-  
-      public void connect(){
-        try{
-          Class.forName("com.mysql.jdbc.Driver").newInstance();
-          conn = (Connection) DriverManager.getConnection(url_read,username_db,password_db);
-          stmt = (Statement) conn.createStatement();
-          
-        }catch(Exception e){
-          e.printStackTrace();
-        }
-      }
-=======
-    
+
+```java    
           public void connect(){
             try{
               Class.forName("com.mysql.jdbc.Driver").newInstance();
@@ -186,7 +178,7 @@ Android APP 登录 注册 SAE 部署 - [1] JavaWeb的编写与部署
               e.printStackTrace();
             }
           }
->>>>>>> f1bb530cb3b9921e6b76d4315c9b92f7f6ee08f8
+```
 
 * Mysql使用的是免费的db4free,代价就是本地连接非常慢。
   [mysql link](http://www.db4free.net)
