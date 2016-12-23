@@ -45,8 +45,8 @@ Android APP 登录 注册 SAE 部署 - [3] 客户端编写
 
 * [github - xxx1 project](https://github.com/tsbxmw/xxx1)
 
-
-    <不定期更新>
+* 不定期更新
 
 ### NEXT -->Android APP 登录 注册 SAE 部署 - [4] 客户端编写 - 登录 
+
 * [next](https://tsbxmw.github.io/2016/08/20/Android-app_test_4/)
