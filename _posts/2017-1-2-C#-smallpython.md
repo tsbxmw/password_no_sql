@@ -31,7 +31,7 @@ C# 小程序  -  模拟 jenkins 的运行
 *  bat中不掺杂其他的非windows自带语句
 *  win32 console exe中不调用其他程序
 
-```C#    
+```C  
 
     using System;
     using System.Collections.Generic;
