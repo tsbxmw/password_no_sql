@@ -20,7 +20,7 @@ C# 小程序  -  模拟 jenkins 的运行
 
 ### 界面
 
-    ![](/images/blog/python/img_002.png)
+    ![](/images/blog/python/img_002.PNG)
     
 ### 内容
     
