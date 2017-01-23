@@ -10,7 +10,7 @@ permalink: /about/
 
 * https://tsbxmw.github.io
 
-* http://www.mengweibbs.cn(备案中)
+* http://www.mengweibbs.cn
 
 ## 联系
 
