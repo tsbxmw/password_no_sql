@@ -38,9 +38,9 @@ C# 小程序  -  模拟 jenkins 的运行
 ### How does Jenkins work？
 
 > #### **Pipeline** <br><br>
+>
 > #### What is the Pipeline ？ <br><br>
-> 在jenkins 2.0 时代，Pipeline已经取代了原来的Job的形式，更为易用，但是需要熟悉 gr
-oovy 代码，熟悉 git svn jenkins python bat shell 等各种脚本和程序你才可以熟练的使用它！
+> 在jenkins 2.0 时代，Pipeline已经取代了原来的Job的形式，更为易用，但是需要熟悉 groovy 代码，熟悉 git svn jenkins python bat shell 等各种脚本和程序你才可以熟练的使用它！
  
 
 ----------
@@ -51,8 +51,9 @@ oovy 代码，熟悉 git svn jenkins python bat shell 等各种脚本和程序�
 > #### **python simulate** <br><br>
 > 使用 python 生成exe程序去模拟 Jenkins 的 Pipeline ！
 > 13个参数，程序可以定制，前12个为 name-value 对，后面为运行过程。<br><br>
+>
 > #### 整个程序所做的是：<br><br>
-> 1 、将前12个输入的参数设置为**环境变量**
+> 1 、将前12个输入的参数设置为**环境变量**<br><br>
 > 2 、将13往后的参数作为运行过程，即进入参数名的文件夹，运行 run.cmd 文件 
 
 
@@ -115,7 +116,7 @@ oovy 代码，熟悉 git svn jenkins python bat shell 等各种脚本和程序�
 ```
 
 > #### 生成可执行文件，而不需要pyton环境<br><br>
->   **pyinstaller -F runtest.py**
+>   **pyinstaller -F runtest.py**<br><br>
 > 上面的命令 用来生成 runtest.exe
 
 
@@ -126,9 +127,9 @@ oovy 代码，熟悉 git svn jenkins python bat shell 等各种脚本和程序�
 
 > 实时显示时，调用其他程序如 bat/python 的时候，会造成异步与同步同时出现，导致 Exception 。
 > 解决方法：<br><br>
-    *  直接调用 python生成的 exe
-    *  bat中不掺杂其他的非windows自带语句
-    *  win32 console exe中不调用其他程序
+    *  直接调用 python生成的 exe<br><br>
+    *  bat中不掺杂其他的非windows自带语句<br><br>
+    *  win32 console exe中不调用其他程序<br><br>
 
 ----------
 
@@ -141,11 +142,11 @@ oovy 代码，熟悉 git svn jenkins python bat shell 等各种脚本和程序�
 ![](images\blog\python\img_006.PNG)
 
 > #### 功能<br><br>
-> 历史记录
-> 显示日志
-> 点选过程
-> 生成报告
-> 显示结果
+> 历史记录<br><br>
+> 显示日志<br><br>
+> 点选过程<br><br>
+> 生成报告<br><br>
+> 显示结果<br><br>
 
 ----------
 
