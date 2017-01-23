@@ -136,10 +136,13 @@ C# 小程序  -  模拟 jenkins 的运行
 
 > #### 设计
 
-![](images\blog\python\img_003.PNG)
-![](images\blog\python\img_004.PNG)
-![](images\blog\python\img_005.PNG)
-![](images\blog\python\img_006.PNG)
+![](/images/blog/python/img_003.PNG)
+
+![](/images/blog/python/img_004.PNG)
+
+![](/images/blog/python/img_005.PNG)
+
+![](/images/blog/python/img_006.PNG)
 
 > #### 功能<br><br>
 > 历史记录<br><br>
