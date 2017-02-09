@@ -10,7 +10,7 @@ Google Test
 
 ## 链接
 
-* [Google Test](https://tsbxmw.github.io/2017/2/9/Test-gtest1/)
+* [Google Test](https://tsbxmw.github.io/2017/2/9/Test-gtest_1/)
 
 ##  摘要
     
@@ -29,7 +29,7 @@ Google Test
 
   C++ test with google test framework
 
-* link ： https://github.com/google/googletest
+* link ： [test](https://github.com/google/googletest)
 
 ----------
 
@@ -79,12 +79,15 @@ Google Test
 | near | ASSERT_NEAR(val1, val2, abs_error) | EXPECT_NEAR(val1, val2, abs_error) | val1 near v2 |
 
 
+--------
 
 > 成功或失败
 
 * SUCCEED() 返回成功
 * FAIL() 失败返回 
 * ADD_FAILURE() 失败继续往下执行
+
+--------
 
 > 异常检查
 
@@ -93,6 +96,8 @@ Google Test
 |check |  ASSERT_THROW(statement,exception_type) |  EXPECT_THROW(statement,exception_type) | same type |
 |      |  ASSERT_ANY_THROW(statement) |  EXPECT_ANT_THROW(statement) | any type |
 |      |   ASSERT_NO_THROW(statement) |  EXPECT_NO_THROW(statement) | no type |
+
+--------
 
 > 输出
 
@@ -152,3 +157,9 @@ Google Test
 	}
 		
 ```
+
+--------
+
+> #### LINK
+
+*  [google test -- 1](https://tsbxmw.github.io/2017/2/10/Test-gtest_2/)
