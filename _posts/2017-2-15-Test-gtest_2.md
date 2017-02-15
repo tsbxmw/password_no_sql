@@ -36,7 +36,7 @@ Google Test -- 1
 > How to use gtest?
 
 * int the other bolg , said the gtest rules
-* link : [googletest](http://mengweibbs.cn/2017/2/9/Test-gtest_1/)
+* link : [googletest](http://mengweibbs.cn/2017/02/09/Test-gtest_1/)
 * now , let's learn how to use it .
 
 --------
@@ -79,4 +79,4 @@ Google Test -- 1
 
 > #### LINK
 
-*  [google test -- 1](https://tsbxmw.github.io/2017/2/15/Test-gtest_2/)
+*  [google test -- 1](http://mengweibbs.cn/2017/2/15/Test-gtest_2/)

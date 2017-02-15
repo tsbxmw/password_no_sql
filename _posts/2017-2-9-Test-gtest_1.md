@@ -10,7 +10,7 @@ Google Test
 
 ## 链接
 
-* [Google Test](https://tsbxmw.github.io/2017/2/9/Test-gtest_1/)
+* [Google Test](http://mengweibbs.cn/2017/02/09/Test-gtest_1/)
 
 ##  摘要
     
