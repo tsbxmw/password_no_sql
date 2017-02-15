@@ -1,6 +1,6 @@
 ---
 layout: post
-title: google test -- 0
+title: Google Test -- 0
 categories: Test
 description: bookmark
 keywords: google test , Auto Test , C++
