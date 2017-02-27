@@ -6,7 +6,11 @@ description: bat 获取当前日期前N天
 keywords: bat, cmd
 ---
 
+> 利用bat脚本获取当前日期的前n天的日期
+
+
 ```dos
+    
     @echo off
     rem 假设系统日期的格式为yyyy-mm-dd
     call :DateToDays %date:~0,4% %date:~5,2% %date:~8,2% PassDays
