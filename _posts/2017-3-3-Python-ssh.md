@@ -67,7 +67,7 @@ python - ssh - sftp
       def __init__(self,ipadd):
           self.ip = ipadd
           self.username = "root"
-          self.password = "slamware123"
+          self.password = "root"
 
       def Connect(self):
           try:
