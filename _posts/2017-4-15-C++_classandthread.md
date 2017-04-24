@@ -657,6 +657,263 @@ C++ Thread in Class at windows
     }
 ```
 
+--------
+
+### now change to linux
+
+```c
+
+    /*
+      Source.h
+      all functions here 
+    */
+    #include<iostream>
+    #include<string>
+    #include <rpos/rpos.h>
+    #include <rpos/robot_platforms/slamware_core_platform.h>
+    #include <rpos/features/sweep_motion_planner.h>
+    #include <rpos/robot_platforms/objects/composite_map_reader.h>
+    #include <rpos/robot_platforms/objects/composite_map_writer.h>
+    #include <rpos/robot_platforms/objects/line_map_layer.h>
+    #include <fstream>
+    #include <pthread.h>
+    #include <stdlib.h>
+    #include <stdio.h>
+
+
+
+    // The value of the ¦Ð
+    #define Pi 3.1415926
+
+    using namespace std;
+    using namespace rpos;
+    using namespace rpos::robot_platforms;
+    using namespace rpos::core;
+    using namespace rpos::features;
+    using namespace rpos::actions;
+    using namespace rpos::features::detail;
+    using namespace rpos::features::system_resource;
+
+    // when push button 1 , stoping the move action and going home
+
+    bool run=true;
+
+
+    class myRectangle{
+
+
+    public:
+        float xy[100][2];//,wall[100][2];
+        SlamwareCorePlatform platform;
+        string ip;
+        int line;
+        //int time;
+
+        myRectangle(){}
+        myRectangle(string ip)
+        {
+            //this->time = time;
+            this->ip = ip;
+        }
+
+        void getPT();
+        //void AddLines();
+        //void AddWalls();
+        
+        bool runNow(int i);
+        //void getTime();
+        void readini();
+        void stop();
+
+        ~myRectangle(){
+            if(platform){
+                platform.disconnect();
+            }
+        }
+    };
+
+    void myRectangle::stop()
+    {
+        platform.rotate(Rotation(0,0,0));
+    }
+
+    void myRectangle::readini()
+    {
+        line = 0;
+        char local[1000];
+        fstream config_ini;
+        config_ini.open("/home/root/lines.ini");//read the config file
+        
+        int i = 0;
+        while(config_ini.getline(local,300,'\n'))
+        {
+            
+            xy[i][0] = (atof)(strtok(local,","));
+            xy[i][1] = (atof)(strtok(NULL,",")); 
+            cout << " [" <<  xy[i][0] << "," << xy[i][1] << "] ";
+            i++;
+            line++;
+        }
+        config_ini.close();
+    }
+
+    void myRectangle::getPT()
+    {
+        while(true)
+        {
+            try{
+                platform = SlamwareCorePlatform::connect(ip,1445,60000);
+                usleep(2000000);
+                if(platform)
+                {
+                    cout << " connect successful" << endl;
+                    cout << " -----------------------------------------------------" << endl;
+                    break;
+                }
+            }catch(rpos::system::detail::ExceptionBase &e)
+            {
+                cout << " fail with " << e.toString() << endl;
+            }
+        }
+    }
+    /*
+    void myRectangle::AddLines() 
+    {
+        platform.clearLines(rpos::features::artifact_provider::ArtifactUsageVirtualTrack);
+        
+        cout << " add Lines now " << endl;
+        for(int j=0;j<6;j++)
+        {
+            platform.addLine(rpos::features::artifact_provider::ArtifactUsageVirtualTrack,Line(Point(xy[j][0],xy[j][1]),Point(xy[(j+1)%6][0],xy[(j+1)%6][1])));
+        }
+    }
+
+    void myRectangle::AddWalls()
+    {
+        
+        platform.clearWalls();
+        
+        cout << " add walls now " << endl;
+
+        for(int j=0;j<6;j++)
+        {
+            platform.addWall(Line(Point(wall[j][0],wall[j][1]),Point(wall[(j+1)%6][0],wall[(j+1)%6][1])));
+        }
+
+    }*/
+
+
+
+    bool myRectangle::runNow(int i)
+    {
+        try{
+            float yaw = 0;
+            rpos::features::motion_planner::MoveOptions mo ;
+            mo.flag = rpos::features::motion_planner::MoveOptionFlagKeyPoints;
+            mo.speed = 0.4;
+            //int roundc = 1;
+            cout << " [" <<  i+1 << "] move to " << xy[i][0] << "," << xy[i][1] << endl;
+            MoveAction moveaction = platform.moveTo(Location(xy[i][0],xy[i][1]),mo,yaw);
+            while(moveaction.getStatus() == ActionStatusWaitingForStart)
+            {}
+            while(moveaction.getStatus() == ActionStatusRunning)
+            {
+            if(!run)
+            {
+                moveaction.cancel();
+                return false;
+            }
+            
+        }
+      
+        }catch(rpos::system::detail::ExceptionBase &e)
+        {
+            cout << " fail with " << e.toString() << endl;
+        }
+        return true;
+    }
+
+
+    void *thread_func(void *arg)
+    {
+        while(true){
+        if(run)
+        {
+            myRectangle mr = myRectangle("192.168.11.1");
+                mr.readini();
+            mr.getPT();
+            int i = 0;
+                while(i<mr.line)
+            {
+              
+                if(mr.runNow(i))
+                {
+                i++;
+                cout << "running  " << endl;
+                }
+                else{
+                while(!run)
+                {
+                cout << " stop " << endl;
+                }
+            }
+            }
+        }
+        }
+        return 0;
+    }
+    int main(int argc,char *argv[])
+    {
+
+        try{
+        char gc;
+        gc = getchar();
+
+        if(gc == '1')
+            run = true;
+        if(gc == '0')
+            run = false;
+
+        pthread_t run_thread;
+        void *thread_result;
+        int res = pthread_create(&run_thread,NULL,thread_func,NULL);
+        if(res != 0)
+        {
+            cout << "thread create fail" << endl;
+            return 1;
+        }
+        else{
+             while(true)
+             {  
+                gc = getchar();
+                if(gc == '1')
+                {
+                cout << "run is " << run << endl;
+                run = true;
+                }
+                if(gc == '0')
+                {
+                cout << "run is " << run << endl;
+                run = false;
+                }
+             }
+             pthread_join(run_thread,NULL);                 
+        }
+        
+
+        }catch(rpos::system::detail::ExceptionBase &e)
+        {
+            std::cout << " fail with " << e.what() << endl;
+        }
+
+        return 0;
+    }
+
+
+
+
+```
+
 > #### LINK
 
 * nothing to show
