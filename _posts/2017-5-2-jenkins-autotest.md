@@ -272,6 +272,120 @@ auto test struct of jenkins with groovy script
 
 ```
 
+
+### How to Build other job in pipeline
+
+```java
+    
+    import org.jenkinsci.plugins.workflow.steps.FlowInterruptedException
+
+
+    def version 
+    def date
+
+    //----------------------------------------------------------------------
+
+    stage 'Get Build Info'
+
+    node('rsg' && 'i386-gcc4.6')
+    {
+        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], gitTool: 'Default', submoduleCfg: [], userRemoteConfigs: [[credentialsId: '6e519a56-9857-46cc-ad30-369cd6984189', url: 'https://stash.slamtec.com/scm/slam/topic_slamware_release.git']]])
+        version = readFile 'scripts/version.txt'
+        date = new Date().format('yyyyMMdd')
+        
+    }
+
+    node('Rsg-slave7'){
+        
+        if(!BuildDaily())
+        {
+            creatfail()
+            return
+        }
+        else
+        {
+            def versionname = 'zeus_edison.' + version.minus('\n') + '.' + date + '.bin'
+            echo versionname
+            def SHARE_PATH = '\\\\10.254.0.3\\share\\release\\daily\\'
+            
+            def IP_SLAMWARE =  "${IP}"
+            echo IP_SLAMWARE
+            def SLAMWARE_PATH = SHARE_PATH + "zeus\\" + date + "\\" + versionname
+            echo SLAMWARE_PATH
+            def NAME_OF_WRONGBUILD = '\\\\10.254.0.3\\share\\temp\\mengwei\\wrongbuild.txt'
+            echo NAME_OF_WRONGBUILD
+            def COUNT_OF_ONEBUILD = '5'
+            def NAME_OF_ONEBUILD = SHARE_PATH + "zeus\\" + date + "\\" + versionname
+            def COUNT_OF_DOWNUP = '2'
+            def NAME_OF_DOWNBUILD = SHARE_PATH + "zeus\\" + date + "\\" + versionname
+            def NAME_OF_UPBUILD = SHARE_PATH + "zeus\\" + date + "\\" + versionname
+            def MAIL_TO = ' wei.meng@slamtec.com'
+            def MAIL_CC = ' wei.meng@slamtec.com'
+            def FAIL_MAIL_TO =  ' wei.meng@slamtec.com'
+            def BUILD_RESULT = 'success'
+            def TEST_STAGES =  "${TEST_STAGES}"
+            
+            
+            
+            build job: 'ZEUS_AUTOTEST', parameters: [[$class: 'StringParameterValue', name: 'PRODUCT_NAME', value: 'ZEUS_TEST'],[$class: 'StringParameterValue', name: 'TEST_NAME', value: 'ZEUS_DAILY'], [$class: 'TextParameterValue', name: 'TEST_STAGES', value:TEST_STAGES], [$class: 'StringParameterValue', name: 'IP_SLAMWARE', value: IP_SLAMWARE], [$class: 'StringParameterValue', name: 'SLAMWARE_PATH', value: SLAMWARE_PATH], [$class: 'StringParameterValue', name: 'NAME_OF_WRONGBUILD', value: NAME_OF_WRONGBUILD], [$class: 'StringParameterValue', name: 'COUNT_OF_ONEBUILD', value: COUNT_OF_ONEBUILD], [$class: 'StringParameterValue', name: 'NAME_OF_ONEBUILD', value: NAME_OF_ONEBUILD],[$class: 'StringParameterValue', name: 'COUNT_OF_DOWNUP', value: COUNT_OF_DOWNUP ], [$class: 'StringParameterValue', name: 'NAME_OF_DOWNBUILD', value:NAME_OF_DOWNBUILD], [$class: 'StringParameterValue', name: 'NAME_OF_UPBUILD', value: NAME_OF_UPBUILD ],[$class: 'StringParameterValue', name: 'MAIL_TO', value: MAIL_TO],[$class: 'StringParameterValue', name: 'MAIL_CC', value: MAIL_CC], [$class: 'StringParameterValue', name: 'FAIL_MAIL_TO', value: FAIL_MAIL_TO],[$class: 'StringParameterValue', name: 'BUILD_RESULT', value: BUILD_RESULT]],propagate: false
+            
+        }
+        //echo result["startTimeInMillis"]
+        //echo result["duration"]
+        //bat "if exist checkout ( rd /s /q checkout & md checkout ) else ( md checkout )"
+       // bat "if exist checkout ( cd checkout & git pull https://wei.meng:TdCnps1o@stash.slamtec.com/scm/zeus/topic_zeus_test.git ) else ( md checkout & git clone https://wei.meng:TdCnps1o@stash.slamtec.com/scm/zeus/topic_zeus_test.git checkout\\ )"
+    //checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '6e519a56-9857-46cc-ad30-369cd6984189', url: 'https://stash.slamtec.com/scm/zeus/topic_zeus_test.git']]])
+       // bat "git clone https://wei.meng:TdCnps1o@stash.slamtec.com/scm/zeus/topic_zeus_test.git checkout\\ "
+    }
+
+
+
+    def BuildDaily(){
+        // daily build of zeus master branch
+        stage 'Daily Build'
+        stage "Build Daily Test"
+        result = build job: 'TEST_SCRIPT', parameters: [[$class: 'StringParameterValue', name: 'TEST_STAGES', value: 'Flash Daily Build']], propagate: false
+        echo result["buildVariables"]
+        echo result["result"]
+        echo result["id"]
+        //echo result["number"]
+        echo result["displayName"]
+        if(result["result"] == "SUCCESS")
+        {
+            echo "Build Daily Test Successful !"
+            echo "-----------------------------------------------------"
+            return true
+        }
+        else{
+            echo "Build Daily Test Failed !"
+            echo "-----------------------------------------------------"
+            return false
+        }
+    }
+
+    def creatfail(){
+        subjects = "Build Daily Failed!"
+        body = """
+        <html>
+            <head>
+            <meta http-equiv="content-type" content="text/html;charset=utf-8">
+            <title>ZEUS_DAILY TEST REPORT</title>
+            <div>
+                <table  border="0" cellpadding="5"  align=center  cellspacing="2" width="95%"  >
+                <tr bgcolor="#00FFFF" height="100px" style="color:red"><th width="100%">Daily Build Faild</th></tr>
+                
+                </table>
+            </div>
+            </body>
+        </html>
+        """
+        mail body: body, cc: "${FAIL_MAIL_TO}", charset: 'UTF-8', mimeType: 'text/html',subject:subjects , to: "${FAIL_MAIL_TO}"
+    }
+
+
+
+```
+
 > #### LINK
 
 * nothing to show
