@@ -51,7 +51,7 @@ Python tools
 
 > a good terminal output 
 
-    ```python
+```python
 
 
     from prettytable import PrettyTable
@@ -97,6 +97,7 @@ Python tools
     |         cat          |    -1    |
 
     +----------------------+----------+
+    
 ```
 
 ### sh
