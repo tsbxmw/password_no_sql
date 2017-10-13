@@ -1,3 +1,12 @@
+---
+layout: wiki
+title: Useful git command
+categories: Git
+description: git commands
+keywords: git, cmd
+---
+
+
 # useful git command 
 
 
@@ -172,4 +181,4 @@ links
 
     git config --global alias.co checkout
 
-    
+
