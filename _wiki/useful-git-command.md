@@ -57,8 +57,11 @@ links
     here has lot : short , full , fuller , format , oneline
 
     git log --pretty=oneline  : show information at one line one commit
+
     git log --pretty=short    : show short information
+
     git log --pretty=full     : show full information
+
     git log --pretty=fuller   : show fuller information
 
     git log --pretty=format:"%h - %t"
@@ -83,14 +86,19 @@ links
 * show last n commit
     
     n is number
+
     git log -n
 
 * show information at current date
 
     git log --since=2.week
+
     git log --since=2017-10-13
+
     git log --after=2017-10-12
+
     git log --until=today
+
     git log --before=today
 
 * show information of author
@@ -147,6 +155,7 @@ links
 * 移除与重命名
 
     git remote rename abc cab
+    
     git remote rm cab
 
 ## git tag
