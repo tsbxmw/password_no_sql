@@ -1,7 +1,7 @@
 ---
 layout: post
 title: jenkins autotest
-categories: jenkins
+categories: Jenkins
 description: bookmark
 keywords: jenkins, autotest, groovy
 ---

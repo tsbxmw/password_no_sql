@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Framework of Auto Build & Test
-categories: python
+categories: Python
 description: bookmark
 keywords: python, autotest, autobuild
 ---

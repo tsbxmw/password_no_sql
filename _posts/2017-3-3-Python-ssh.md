@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Python ssh and sftp 
-categories: python
+categories: Python
 description: bookmark
 keywords: ssh,python,sftp
 ---
