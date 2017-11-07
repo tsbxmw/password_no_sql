@@ -7,6 +7,9 @@ keywords: python, autotest, autobuild
 ---
 
 **Welcome to the Framework wiki!**
+
+* [web link](http://mengweibbs.cn/Framework)
+
 # Auto Run FrameWrok
 
 ## what is Auto Run Framework (arf) ?
