@@ -22,5 +22,5 @@
 	
 > what i am focus now ?
 
-	[AutoTest Framework](http://autotest.wang)
+* [AutoTest Framework](http://autotest.wang)
 
