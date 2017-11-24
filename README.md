@@ -22,5 +22,5 @@
 	
 > what i am focus now ?
 
-	the java web system show board.
+	[AutoTest Framework](http://autotest.wang)
 
