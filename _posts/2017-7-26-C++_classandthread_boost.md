@@ -6,6 +6,8 @@ description: bookmark
 keywords: c++,thread,class,windows,boost
 ---
 
+----
+
 C++ Thread in Class at windows
 
 ## 链接

@@ -6,9 +6,11 @@ description: bookmark
 keywords: javascript, xlsx, bootstrap-table, sheetjs, tableexport
 ---
 
+----
 
 How use xlsx and bootstrap-table to import xlsx file & export to a xlsx file
 
+----
 
 # about
 
