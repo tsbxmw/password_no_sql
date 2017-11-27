@@ -6,7 +6,6 @@ description: bookmark
 keywords: python, autotest, autobuild
 ---
 
-AutoTest Framework wiki page !
 
 **Welcome to the Framework wiki!**
 
@@ -31,8 +30,6 @@ AutoTest Framework wiki page !
 * arf would be work better than the old framework 
 
 ## comming soon ...
-
-
 
 > #### LINK
 
