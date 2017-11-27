@@ -6,6 +6,8 @@ description: bookmark
 keywords: python, autotest, autobuild
 ---
 
+AutoTest Framework wiki page !
+
 **Welcome to the Framework wiki!**
 
 * [web link](http://mengweibbs.cn/Framework)
