@@ -6,7 +6,7 @@ description: How use xlsx and bootstrap-table to import xlsx file & export to a 
 keywords: javascript, xlsx, bootstrap-table, sheetjs, tableexport
 ---
 
-* How use xlsx and bootstrap-table to import xlsx file & export to a xlsx file
+How use xlsx and bootstrap-table to import xlsx file & export to a xlsx file
 
 # about
 
@@ -247,4 +247,3 @@ function deal(json){
 > #### LINK
 
 * [see the demo at here](https://github.com/tsbxmw/testshow/tree/master/java-web-bom)
-
