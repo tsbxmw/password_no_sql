@@ -12,13 +12,14 @@ How use xlsx and bootstrap-table to import xlsx file & export to a xlsx file
 
 ## sheetjs
 
-official website : http://sheetjs.com/
-github page : https://github.com/sheetjs/js-xlsx
+* official website : http://sheetjs.com/
+
+* github page : https://github.com/sheetjs/js-xlsx
 
 ## bootstrap-table
 
-official websit : http://bootstrap-table.wenzhixin.net.cn/
-github page : https://github.com/wenzhixin/bootstrap-table
+* official websit : http://bootstrap-table.wenzhixin.net.cn/
+* github page : https://github.com/wenzhixin/bootstrap-table
 
 
 # how to use xlsx.js to import one xlsx file?
