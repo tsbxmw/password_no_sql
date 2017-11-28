@@ -9,19 +9,20 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en"
-title                    : "Site Title"
+title                    : "MengWei's blog"
 title_separator          : "-"
-name                     : "Your Name"
-description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+name                     : "wei.meng"
+description              : "Personal Blog"
+url                      : http://mengweibbs.cn# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : /blog# the subpath of your site, e.g. "/blog"
+repository               : tsbxmw# GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
-  disqus:
+  provider               : disqus
+  # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+  disqus: tsbxmw
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
@@ -40,7 +41,8 @@ staticman:
   path                   : # "/_data/comments/{options.slug}" (default)
   requiredFields         : # ['name', 'email', 'message']
   transforms:
-    email                : # "md5"
+    email                : 1050636648@qq.com
+    # "md5"
   generatedFields:
     date:
       type               : # "date"
@@ -75,27 +77,27 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : google # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
+    tracking_id          : UA-80669434-1
 
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Meng Wei"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
-  email            :
-  uri              :
+  bio              : "Easy but better"
+  location         : "ShangHai.China"
+  email            : 
+  uri              : "mengweibbs.cn"
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
   facebook         :
   foursquare       :
-  github           :
-  gitlab           :
+  github           : "tsbxmw"
+  gitlab           : 
   google_plus      :
   keybase          :
   instagram        :
@@ -108,7 +110,7 @@ author:
   tumblr           :
   twitter          :
   vine             :
-  weibo            :
+  weibo            : "18842601728"
   xing             :
   youtube          : # "https://youtube.com/c/MichaelRoseDesign"
 
