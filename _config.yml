@@ -13,9 +13,9 @@ title                    : "MengWei's blog"
 title_separator          : "-"
 name                     : "wei.meng"
 description              : "Personal Blog"
-url                      : http://mengweibbs.cn# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : /blog# the subpath of your site, e.g. "/blog"
-repository               : tsbxmw# GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+url                      : http://mengweibbs.cn # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : /blog # the subpath of your site, e.g. "/blog"
+repository               : tsbxmw # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
