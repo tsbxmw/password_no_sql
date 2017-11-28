@@ -12,8 +12,6 @@ favicon: /favicon.ico
 timezone: Asia/Shanghai
 encoding: "utf-8"
 side_bar_repo_limit: 5
-plugins:
-- jekyll-remote-theme
 
 # ---------------- #
 #      Author      #
@@ -117,5 +115,8 @@ google:
 skill_software_keywords: [Java, C, Python, Shell]
 skill_mobile_app_keywords: [Android autoTest Engineering]
 skill_windows_keywords: [bat, vs, as]
+
+plugins:
+- jekyll-remote-theme
 
 remote_theme: "mmistakes/minimal-mistakes"
