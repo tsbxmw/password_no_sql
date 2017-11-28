@@ -5,24 +5,24 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-remote_theme             : "benbalter/retlab"
+remote_theme             : "mmistakes/minimal-mistakes"
 
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Mengwei's Blog"
+title                    : "Minimal Mistakes"
 title_separator          : "-"
-name                     : &name "meng wei" # &name is a YAML anchor which can be *referenced later
-description              : &description "Live easy but better !"
-url                      : https://tsbxmw.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "/_posts" # the subpath of your site, e.g. "/blog"
-repository               : "tsbxmw"
+name                     : &name "Michael Rose" # &name is a YAML anchor which can be *referenced later
+description              : &description "A flexible Jekyll theme for your blog or site with a minimalist aesthetic."
+url                      : https://mmistakes.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "/minimal-mistakes" # the subpath of your site, e.g. "/blog"
+repository               : "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman_v2", "staticman" "custom"
+  provider               : "staticman_v2" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman_v2", "staticman" "custom"
   disqus:
     shortname            :
   discourse:
@@ -49,61 +49,61 @@ staticman:
       options:
         format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 reCaptcha:
-  siteKey                : 
-  secret                 : 
+  siteKey                : "6LdRBykTAAAAAFB46MnIu6ixuxwu9W1ihFF8G60Q"
+  secret                 : "PznnZGu3P6eTHRPLORniSq+J61YEf+A9zmColXDM5icqF49gbunH51B8+h+i2IvewpuxtA9TFoK68TuhUp/X3YKmmqhXasegHYabY50fqF9nJh9npWNhvITdkQHeaOqnFXUIwxfiEeUt49Yoa2waRR7a5LdRAP3SVM8hz0KIBT4="
 
 atom_feed:
   path                   : # blank (default) uses feed.xml
 
 # SEO Related
-google_site_verification : # Replace this with your ID, or delete
+google_site_verification : "UQj93ERU9zgECodaaXgVpkjrFn9UrDMEzVamacSoQ8Y" # Replace this with your ID, or delete
 bing_site_verification   :
 yandex_site_verification :
 naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               :
+  username               : &twitter "mmistakes"
 facebook:
-  username               :
+  username               : &facebook "michaelrose"
   app_id                 :
   publisher              :
-og_image                 : "/assets/images/favicon.ico" # Open Graph/Twitter default site image
+og_image                 : "/assets/images/site-logo.png" # Open Graph/Twitter default site image
 # For specifying social profiles, used in _includes/seo.html
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
-    - "http://mengweibbs.cn"
-    - "http://autotest.wang"
+    - "https://twitter.com/mmistakes"
+    - "https://facebook.com/michaelrose"
 
 # Analytics
 analytics:
   provider               : "google-universal" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :  # Replace this with your ID, or delete
+    tracking_id          : "UA-2011187-3" # Replace this with your ID, or delete
 
 
 # Site Author
 author:
-  name             : "wei.meng"
-  avatar           : "/assets/images/favicon.ico"
-  bio              : "+_+"
-  location         : "wei.meng"
+  name             : *name # *name is a YAML reference pointing to the &anchor earlier
+  avatar           : "/assets/images/michael-rose.jpg"
+  bio              : "Just another boring, tattooed, time traveling, designer."
+  location         : "Buffalo, NY"
   email            :
-  uri              : "http://mengweibbs.cn"
+  uri              : "https://mademistakes.com"
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
-  facebook         : 
+  facebook         : *facebook
   foursquare       :
-  github           : "tsbxmw"
+  github           : "mmistakes"
   gitlab           :
   google_plus      :
   keybase          :
-  instagram        :
+  instagram        : "mmistakes"
   lastfm           :
   linkedin         :
   pinterest        :
@@ -111,7 +111,7 @@ author:
   stackoverflow    : # https://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          :
+  twitter          : *twitter
   vine             :
   weibo            :
   xing             :
@@ -221,7 +221,32 @@ defaults:
       comments: false
       sidebar:
         nav: "docs"
- 
+  # _recipes
+  - scope:
+      path: ""
+      type: recipes
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  # _pets
+  - scope:
+      path: ""
+      type: pets
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: false
+      share: true
 
 
 # Sass/SCSS
