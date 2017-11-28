@@ -116,4 +116,4 @@ skill_software_keywords: [Java, C, Python, Shell]
 skill_mobile_app_keywords: [Android autoTest Engineering]
 skill_windows_keywords: [bat, vs, as]
 
-theme: jekyll-theme-hacker
+theme: jekyll-theme-minima
