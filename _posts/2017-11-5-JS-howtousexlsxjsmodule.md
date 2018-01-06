@@ -1,12 +1,12 @@
 ---
 layout: post
-title: How use xlsx and bootstrap-table to import xlsx file 
+title: How to use xlsx and bootstrap-table to import xlsx file 
 categories: JS
 description: How to use xlsx and bootstrap-table to import xlsx file & export to a xlsx file
 keywords: javascript, xlsx, bootstrap-table, sheetjs, tableexport
 ---
 
-How use xlsx and bootstrap-table to import xlsx file & export to a xlsx file
+How to use xlsx and bootstrap-table to import xlsx file & export to a xlsx file
 
 # about
 
