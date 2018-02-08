@@ -1,12 +1,16 @@
 ---
 layout: post
-title: Python excel 解析方法
+title: Python excel 解析方法，读写
 categories: Python
 description: 笔记
 keywords: Python, excel
 ---
 
-python xml 解析方法 - xlrd 
+python xml 解析方法 - xlrd - xlwt - xlsxwriter
+
+## 更新 
+
+* add xlsxwriter 使用方法 at 20180208
 
 ## 链接
 
@@ -103,8 +107,34 @@ python xml 解析方法 - xlrd
         openxls('api.xlsx')
 ```
 
+### python 写入 XLXS 文件
+
+* [xlsxwriter 地址](http://xlsxwriter.readthedocs.io/#)
+
+> 安装方法 ：
+
+* official ： http://xlsxwriter.readthedocs.io/getting_started.html#getting-started
+
+* locally using : 1, pip install XlsxWriter  or 2, easy_install XlsxWriter 
 
 
+> 打开要写的文件
+
+    workwbook = xlsxwriter.Workbook(filename)
+    workwsheet = workwbook.add_worksheet()
+
+> 写入内容到对应的行列（单元格）
+
+    col = "test"
+    rown = 1
+    coln = 1
+    workwsheet.write(rown, coln, col)
+
+> 记得关闭 workbook， 不然会报 exception
+
+    workwsheet.close()
+
+    
 
 ### LINK
 * github python 未上传
