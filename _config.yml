@@ -1,61 +1,119 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
+# ---------------- #
+#   Main Configs   #
+# ---------------- #
+baseurl: mengweibbs.cn
+url: mengweibbs.cn
+date_format: "ordinal"
 title: MengWei’s Blog
-brief-intro: easy but better
-baseurl: mengweibbs.cn # the subpath of your site, e.g. /blog
-url: "mengweibbs.cn" # the base hostname & protocol for your site
+subtitle: "Personal Blog"
+description: "MengWei’s Blog"
+keywords: Mengwei, tsbxmw, 
+favicon: /favicon.ico
+timezone: Asia/Shanghai
+encoding: "utf-8"
+side_bar_repo_limit: 5
 
-permalink: /:year/:month/:day/:title/
+# ---------------- #
+#      Author      #
+# ---------------- #
+author: Wei Meng
+organization: SLAM TEC, Inc.
+organization_url: http://www.slamtec.com
+location: Shanghai, China
+email: mengwei1101@hotmail.com
 
-# other links
-twitter_username: #
-facebook_username: #
-github_username:  tsbxmw
-email: mengwei1101@gmail.com
-weibo_username: # 
-zhihu_username: # 
-linkedIn_username: # 
-dribbble_username: # 
+# ---------------- #
+#    Navigation    #
+# ---------------- #
+navs:
+  -
+    href: /
+    label: 首页
 
-description_footer: MengWei‘s Blog
+  -
+    href: /categories/
+    label: 分类
 
-# comments
-# two ways to comment, only choose one, and use your own short name
-# 两种评论插件，选一个就好了，使用自己的 short_name
-duoshuo_shortname: #hygblog
-disqus_shortname: #gaohaoyang
+  -
+    href: /wiki/
+    label: 维基
 
-# statistic analysis 统计代码
-# 百度统计 id，将统计代码替换为自己的百度统计id，即
-# hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
-# xxxxx字符串
-baidu_tongji_id: # 552aa8d99c04e57a157ba015b317ce20
-google_analytics_id: # UA-72449510-4 # google 分析追踪id
+  -
+    href: /links/
+    label: 链接
 
-# Build settings
+  -
+    href: /about/
+    label: 关于
+
+# ---------------- #
+#       RSS        #
+# ---------------- #
+subscribe_rss: /feed.xml
+
+# ---------------- #
+#      Jekyll      #
+# ---------------- #
 markdown: kramdown
-
 kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+    input: GFM
+highlighter: rouge
+paginate: 8
+lsi: false
+quiet: false
+excerpt_separator: "\n\n"
+permalink: /:year/:month/:day/:title/
+gems:
+    - jekyll-github-metadata
+    - rouge
+#     - jekyll-html-pipeline
+    - jekyll-paginate
+    - jekyll-sitemap
+    - jekyll-feed
+    - jemoji
+#     - jekyll-mentions
+collections:
+    wiki:
+        output: true
+        permalink: /wiki/:path/
 
-# port
-# port: 1234
+repository: mzlogin/mzlogin.github.io
 
-# url
-category_dir: category/
-tag_dir: tag/
+# ---------------- #
+#      Socials     #
+# ---------------- #
+github_username: tsbxmw
+#douban_username: freedim
+#facebook_username: mzlogin
+weibo_username: 18842601728
+zhihu_username: 18842601728
+#twitter_username: mzlogin
 
-# excerpt
-excerpt_separator: "\n\n\n\n"
+# ---------------- #
+#      Comments    #
+# ---------------- #
+# support provider: disqus, duoshuo
+comments_provider: netease_gentie
+# !!!重要!!! 请修改下面两个用户名为你自己申请的
+# !!!Important!!! Please modify usernames below to yours
+#duoshuo_username: tsbx
+#netease_gentie
+disqus_username: tsbxmw
+netease_gentine_key: c977cbb1882f4724884540f3a233bd78
+# 在使用 disqus 的时候可点击显示多说评论框
+lazy_load_disqus: true
 
-# paginate
-plugins: [jekyll-paginate]
-paginate: 6
-port: 4001
+# ---------------- #
+#    Analytics     #
+# ---------------- #
+google:
+    analytics_id: UA-80669434-1
+
+# ---------------- #
+#      Datas       #
+# ---------------- #
+skill_software_keywords: [Java, C, Python, Shell]
+skill_mobile_app_keywords: [Android autoTest Engineering]
+skill_windows_keywords: [bat, vs, as]
+
+theme: jekyll-theme-hacker
