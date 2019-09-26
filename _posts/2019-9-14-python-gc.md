@@ -1,8 +1,8 @@
 ---
 layout: post
-title: pyhton GC - 垃圾回收机制
-categories: python
-description: python - GC 垃圾回收机制
+title: Python GC - 垃圾回收机制
+categories: Python
+description: Python - GC 垃圾回收机制
 keywords: gpythono
 ---
 
