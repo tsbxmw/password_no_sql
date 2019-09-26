@@ -60,11 +60,11 @@ PCbuild\build.bat -e -d
 
 > PCBuild/pcbuild.sln
 
-![](/images/blog/python-core/1-1.PNG)
+![](/images/blog/python-core/1-1.png)
 
 ### 点击 运行,Python 已经生成
 
-![](/images/blog/python-core/1-2.PNG)
+![](/images/blog/python-core/1-2.png)
 
 ## 主要项目
 
@@ -72,7 +72,7 @@ PCbuild\build.bat -e -d
 
 #### 我们主要关注 Modules 和 Objects
 
-![](/images/blog/python-core/1-3.PNG)
+![](/images/blog/python-core/1-3.png)
 
 
 | name | value | remark |
@@ -88,11 +88,11 @@ PCbuild\build.bat -e -d
 
 - 像比较常见的 json math 等都可以看到
 
-![](/images/blog/python-core/1-4.PNG)
+![](/images/blog/python-core/1-4.png)
 
 
 ### Objects 万物皆对象就是定义在这里
 
 - 可以看到 bool 类型 boolobject.c
 
-![](/images/blog/python-core/1-5.PNG)
+![](/images/blog/python-core/1-5.png)
