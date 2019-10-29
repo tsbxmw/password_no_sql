@@ -1,7 +1,7 @@
 ---
 layout: post
 title: leetcode - 盛水最多的容器 11
-categories: python3
+categories: leetcode
 description: leetcode - 盛水最多的容器
 keywords: python3, leetcode, go
 ---

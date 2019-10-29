@@ -1,7 +1,7 @@
 ---
 layout: post
 title: haf - automation test framework
-categories: python3
+categories: Python
 description: haf - automation test framework
 keywords: python3, haf, automation
 ---

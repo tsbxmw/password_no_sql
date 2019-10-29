@@ -1,7 +1,7 @@
 ---
 layout: post
 title: leetcode - 807 保持城市天际线， 78 子集
-categories: python3
+categories: leetcode
 description: leetcode - 807 保持城市天际线， 78 子集
 keywords: python3, leetcode
 ---

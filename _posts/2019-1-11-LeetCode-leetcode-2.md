@@ -1,7 +1,7 @@
 ---
 layout: post
 title: leetcode - 数字字母组合
-categories: python3
+categories: leetcode
 description: leetcode - 数字字母组合
 keywords: python3, leetcode
 ---
