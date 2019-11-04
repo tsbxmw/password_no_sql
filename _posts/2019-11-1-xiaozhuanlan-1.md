@@ -1,53 +1,74 @@
 ---
 layout: post
-title: 小专栏 - 1 (GoPy)
+title: Python 内置类型
 categories: xiaozhuanlan
-description: 小专栏 GoPy 第一篇
+description: Python 内置类型
 keywords: 小专栏, Go, Python
 ---
 
-GoPy 1
+# Python 内置类型
+
+> python 文档官方网址，包含了从 python 安装和使用的内容。
+
+- [文档目录](https://docs.python.org/zh-cn/3/)
+- [安装和使用 python](https://docs.python.org/zh-cn/3/using/index.html)
+- [入门教程](https://docs.python.org/zh-cn/3/tutorial/index.html)
+- [安装模块](https://docs.python.org/zh-cn/3/installing/index.html)
+- [分发模块](https://docs.python.org/zh-cn/3/distributing/index.html)
+- [常见问题](https://docs.python.org/zh-cn/3/faq/index.html)
+
+## 内容介绍（简介）
+
+> 后续会通过专栏不断介绍以下相关内容，包括概念、介绍、进阶使用与源码解析等。
+
+### 数字
+
+> 存在三种不同的数字类型: 整数, 浮点数 和 复数。 此外，布尔值属于整数的子类型。 
+> 数字是由数字字面值或内置函数与运算符的结果来创建的。
+
+- int 
+
+  不带修饰的整数字面值（包括十六进制、八进制和二进制数）会生成整数。
+
+- float
+
+  包含小数点或幂运算符的数字字面值会生成浮点数。
+
+- complex
+
+  在数字字面值末尾加上 'j' 或 'J' 会生成虚数（实部为零的复数），你可以将其与整数或浮点数相加来得到具有实部和虚部的复数。
+
+### 序列
+
+#### 可变序列
+
+- list
+
+- bytearray
+
+#### 不可变序列
+
+- tuple
+
+- str
+
+- range
+
+- bytes
+
+#### 运算
+
+### 映射
+### 逻辑、布尔和比较运算
+### 迭代器
+### 生成器
+### 集合
+### 函数和方法
+### 类
 
 
-## ```Hi，大家好，很高兴大家能订阅 GoPy(派)。```
+## python 内置类型思维脑图 
 
-### Python
+> [文件原始链接](https://www.processon.com/view/link/5dbfd58ce4b0ea86c4204af9)
 
-> 初期
-
-    专栏的初期，更多的会以 Python 为主，深入的讨论 数据结构、算法和使用频率高的库，
-    也会穿插一些代码技巧和项目整合的经验等。
-    
-
-> 中期
-
-    专栏的中期，更多的会以 Web 框架为主。
-    包括整个 Web 服务的生命周期的链路，Web 服务各个模块的介绍和拆解。中间会介绍各种主流的技术的使用和示例。
-    Python 主要会以 Flask 框架的使用为主。
-
-> 后期
-
-    专栏的后期，更多会以源码解析为主。
-
-### Go
-
-> 初期
-
-> 中期
-
-> 后期
-
-    
-## 目的
-
-> 做到知其然，更要知其所以然
-
-    不但知道为什么要这样写，还要知道这样写的深层次原因。
-
-## 方法
-
-    主要是通过实际使用的代码示例，由浅入深的学习 Python 和 Go。
-
-
-
-
+![](http://assets.processon.com/chart_image/5dbf8ddee4b0c555374c3281.png)
